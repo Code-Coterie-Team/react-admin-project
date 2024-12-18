@@ -1,4 +1,5 @@
-import React from 'react'
+// import React from 'react';
+// import { Link } from 'react-router-dom';
 
 const Sidbar = () => {
     return (
@@ -11,6 +12,7 @@ const Sidbar = () => {
             </button>
 
             <nav className="pt-8 flex flex-col">
+              
                 <div className="overView flex p-4 mb-2 hover:bg-bgHover rounded-lg">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C13.1046 3 14 3.89543 14 5L14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19L10 5C10 3.89543 10.8954 3 12 3ZM4 12C5.10457 12 6 12.8954 6 14V19C6 20.1046 5.10457 21 4 21C2.89543 21 2 20.1046 2 19V14C2 12.8954 2.89543 12 4 12ZM22 10C22 8.89543 21.1046 8 20 8C18.8954 8 18 8.89543 18 10V19C18 20.1046 18.8954 21 20 21C21.1046 21 22 20.1046 22 19V10Z" fill="#5b5ee7" />
@@ -19,6 +21,7 @@ const Sidbar = () => {
                         Overview
                     </span>
                 </div>
+             
                 <div className="products flex  p-4 hover:bg-bgHover rounded-lg">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 19.75C9.08579 19.75 8.75 20.0858 8.75 20.5C8.75 20.9142 9.08579 21.25 9.5 21.25C9.91421 21.25 10.25 20.9142 10.25 20.5C10.25 20.0858 9.91421 19.75 9.5 19.75ZM7.25 20.5C7.25 19.2574 8.25736 18.25 9.5 18.25C10.7426 18.25 11.75 19.2574 11.75 20.5C11.75 21.7426 10.7426 22.75 9.5 22.75C8.25736 22.75 7.25 21.7426 7.25 20.5Z" fill="#8c5df7" />
@@ -29,6 +32,8 @@ const Sidbar = () => {
                         Products
                     </span>
                 </div>
+             
+               
                 <div className="users mb-2 flex  p-4 hover:bg-bgHover rounded-lg">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38566 15.6959C4.19864 16.2895 3.75 16.9706 3.75 17.5C3.75 18.0294 4.19864 18.7105 5.38566 19.3041C6.52782 19.8751 8.15819 20.25 10 20.25C11.8418 20.25 13.4722 19.8751 14.6143 19.3041C15.8014 18.7105 16.25 18.0294 16.25 17.5C16.25 16.9706 15.8014 16.2895 14.6143 15.6959C13.4722 15.1249 11.8418 14.75 10 14.75C8.15819 14.75 6.52782 15.1249 5.38566 15.6959ZM4.71484 14.3543C6.10618 13.6586 7.97582 13.25 10 13.25C12.0242 13.25 13.8938 13.6586 15.2852 14.3543C16.6316 15.0275 17.75 16.0964 17.75 17.5C17.75 18.9036 16.6316 19.9725 15.2852 20.6457C13.8938 21.3414 12.0242 21.75 10 21.75C7.97582 21.75 6.10618 21.3414 4.71484 20.6457C3.36836 19.9725 2.25 18.9036 2.25 17.5C2.25 16.0964 3.36836 15.0275 4.71484 14.3543Z" fill="#eb4798" />
