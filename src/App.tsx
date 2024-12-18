@@ -1,15 +1,22 @@
 // import { useState } from 'react'
 import Layout from './components/Layout'
-// import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Overview from './components/Overview';
 // import Sidbar from './components/Sidbar';
-// import Products from './components/Products';
+import Products from './components/Products';
 
 function App() {
 
 
   return (
     <>
-          <Layout />
+      <Layout >
+        <Routes>
+          <Route path="/" element={<Overview />} />
+          <Route path="/about" element={<Products />} />
+        </Routes>
+      </Layout>
+
     </>
   )
 }
