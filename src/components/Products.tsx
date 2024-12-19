@@ -1,15 +1,16 @@
 // import React from 'react'
-import HeaderPanel from "./HeaderPanel"
+import Panel from "./panel"
+import { Flash,Users,ShoppingBag,BarChart01 } from "../icons"
 
 const Products = () => {
   return (
     <div className='main py-6 px-8'>
-      <HeaderPanel
-        totalSalesTitle="Total Sales" totalSales="$12,345"
-        newUsersTitle="new Users" newUsers="1,234"
-        totalProductsTitle="total Products" totalProducts="  567"
-        ConversionRateTitle="Conversion Rate" ConversionRate=" 12.5%"
-      />
+      <div className='grid grid-cols-4 gap-3 pb-8'>
+                <Panel icon={<Flash />} title="Total Sales" amount={12} type="aset" />
+                <Panel icon={<Users />} title="New Users" amount={14} type="" />
+                <Panel icon={<ShoppingBag />} title="Total Products" amount={15} type="" />
+                <Panel icon={<BarChart01 />} title="Conversion Rate" amount={15.5} type="persent" />
+            </div>
       <div className='productList mb-8 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid '>
         <div className="flex pb-7 justify-between items-center">
           <h2 className="text-xl text-gray-100 font-semibold">Product List</h2>
