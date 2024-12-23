@@ -1,11 +1,11 @@
 // import React from 'react'
 // import HeaderPanel from "./HeaderPanel"
-import Panel from "./panel"
+import Panel from "./Panel"
 import { Flash, Users, ShoppingBag, BarChart01 } from "../icons"
 function Overview() {
 
     return (
-        <div className='main py-6 px-8'>
+        <div className='overviewPage main py-6 px-8 h-screen'>
             <div className='grid grid-cols-4 gap-3 pb-8'>
                 <Panel icon={<Flash />} title="Total Sales" amount={12345} type="aset" />
                 <Panel icon={<Users />} title="New Users" amount={1234} type="" />
