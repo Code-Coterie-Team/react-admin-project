@@ -16,22 +16,9 @@ import CheckMarkCircle from "./checkMarkCircle.svg?react"
 import Layout06 from "./layout06.svg?react"
 import Alarm from "./alarm.svg?react"
 import Eyse from "./eye.svg?react"
+import PackageBox06 from "./packageBox06.svg?react"
+import WarningError from "./warningError.svg?react"
 
-export {Eyse}
-export {Alarm}
-export {BarChart01}
-export {Cart}
-export {Dollar}
-export {EditRectangle}
-export {Flash}
-export {LineChart}
-export {MenuLineHorizontal}
-export {Search02}
-export {Setting}
-export {Trash}
-export {Users}
-export {ShoppingBag}
-export {UserAdd}
-export {UserRemove01}
-export {CheckMarkCircle}
-export {Layout06}
+export {Eyse, PackageBox06, Alarm, BarChart01, Cart, Dollar, EditRectangle, Flash, LineChart,
+     MenuLineHorizontal, Search02, Setting, Trash, Users, ShoppingBag, UserAdd, UserRemove01,
+     CheckMarkCircle, Layout06, WarningError}

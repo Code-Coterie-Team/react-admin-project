@@ -24,7 +24,7 @@ const Sidbar = () => {
 
                 <Link to="/products">
                     <div className="products flex  p-4 hover:bg-bgHover rounded-lg">
-                        <ShoppingBag />
+                        <ShoppingBag className="text-purple-600" width="1.5rem" height="1.rem"/>
                         <span className="pl-3 font-medium ">
                             Products
                         </span>

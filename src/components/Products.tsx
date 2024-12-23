@@ -1,15 +1,17 @@
 // import React from 'react'
 import Panel from "./Panel"
-import { Flash, Users, ShoppingBag, BarChart01, Search02, Trash, EditRectangle } from "../icons"
+import { PackageBox06, BarChart01, Search02, Trash, EditRectangle, LineChart, WarningError, Dollar } from "../icons"
 
 const Products = () => {
   return (
     <div className='productPage main py-6 px-8'>
       <div className='grid grid-cols-4 gap-3 pb-8'>
-        <Panel icon={<Flash />} title="Total Sales" amount={12} type="aset" />
-        <Panel icon={<Users />} title="New Users" amount={14} type="" />
-        <Panel icon={<ShoppingBag />} title="Total Products" amount={15} type="" />
-        <Panel icon={<BarChart01 />} title="Conversion Rate" amount={15.5} type="persent" />
+        <Panel icon={<PackageBox06 className="text-indigo-600" width="1.5rem" height="1.5rem"/>}
+         title="Total Products" amount={1234} type="" />
+        <Panel icon={<LineChart className="text-green-600" width="1.5rem" height="1.5rem"/>} 
+        title="Top Selling" amount={89} type="" />
+        <Panel icon={<WarningError className="text-yellow-500" width="1.5rem" height="1.5rem"/>} title="Low Stock" amount={23} type="" />
+        <Panel icon={<Dollar className="text-red-500" width="1.5rem" height="1.5rem"/>} title="Total Revenue" amount={543210} type="aset" />
       </div>
       <div className='productList mb-8 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid '>
         <div className="flex pb-7 justify-between items-center">
@@ -41,12 +43,12 @@ const Products = () => {
             <tbody>
               <tr>
                 <td className="px-6 py-4 text-sm">Wireless Earbuds</td>
-                <td className="px-6 py-4 text-sm">Electronics</td>
-                <td className="px-6 py-4 text-sm">$59.99</td>
-                <td className="px-6 py-4 text-sm">143</td>
-                <td className="px-6 py-4 text-sm">1200</td>
+                <td className="px-6 py-4 text-sm text-gray-300">Electronics</td>
+                <td className="px-6 py-4 text-sm text-gray-300">$59.99</td>
+                <td className="px-6 py-4 text-sm text-gray-300">143</td>
+                <td className="px-6 py-4 text-sm text-gray-300">1200</td>
                 <td className="px-6 py-4 text-sm">
-                  <button>
+                  <button className="pr-2">
                     <EditRectangle/>
                   </button>
                   <button>
@@ -56,12 +58,12 @@ const Products = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 text-sm">Wireless Earbuds</td>
-                <td className="px-6 py-4 text-sm">Electronics</td>
-                <td className="px-6 py-4 text-sm">$59.99</td>
-                <td className="px-6 py-4 text-sm">143</td>
-                <td className="px-6 py-4 text-sm">1200</td>
+                <td className="px-6 py-4 text-sm text-gray-300">Electronics</td>
+                <td className="px-6 py-4 text-sm text-gray-300">$59.99</td>
+                <td className="px-6 py-4 text-sm text-gray-300">143</td>
+                <td className="px-6 py-4 text-sm text-gray-300">1200</td>
                 <td className="px-6 py-4 text-sm">
-                <button>
+                <button className="pr-2">
                     <EditRectangle/>
                   </button>
                   <button>
@@ -71,12 +73,12 @@ const Products = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 text-sm">Wireless Earbuds</td>
-                <td className="px-6 py-4 text-sm">Electronics</td>
-                <td className="px-6 py-4 text-sm">$59.99</td>
-                <td className="px-6 py-4 text-sm">143</td>
-                <td className="px-6 py-4 text-sm">1200</td>
+                <td className="px-6 py-4 text-sm text-gray-300">Electronics</td>
+                <td className="px-6 py-4 text-sm text-gray-300">$59.99</td>
+                <td className="px-6 py-4 text-sm text-gray-300">143</td>
+                <td className="px-6 py-4 text-sm text-gray-300">1200</td>
                 <td className="px-6 py-4 text-sm">
-                <button>
+                <button className="pr-2">
                     <EditRectangle/>
                   </button>
                   <button>
@@ -86,12 +88,12 @@ const Products = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 text-sm">Wireless Earbuds</td>
-                <td className="px-6 py-4 text-sm">Electronics</td>
-                <td className="px-6 py-4 text-sm">$59.99</td>
-                <td className="px-6 py-4 text-sm">143</td>
-                <td className="px-6 py-4 text-sm">1200</td>
+                <td className="px-6 py-4 text-sm text-gray-300">Electronics</td>
+                <td className="px-6 py-4 text-sm text-gray-300">$59.99</td>
+                <td className="px-6 py-4 text-sm text-gray-300">143</td>
+                <td className="px-6 py-4 text-sm text-gray-300">1200</td>
                 <td className="px-6 py-4 text-sm">
-                <button>
+                <button className="pr-2">
                     <EditRectangle/>
                   </button>
                   <button>
@@ -101,12 +103,12 @@ const Products = () => {
               </tr>
               <tr>
                 <td className="px-6 py-4 text-sm">Wireless Earbuds</td>
-                <td className="px-6 py-4 text-sm">Electronics</td>
-                <td className="px-6 py-4 text-sm">$59.99</td>
-                <td className="px-6 py-4 text-sm">143</td>
-                <td className="px-6 py-4 text-sm">1200</td>
+                <td className="px-6 py-4 text-sm text-gray-300">Electronics</td>
+                <td className="px-6 py-4 text-sm text-gray-300">$59.99</td>
+                <td className="px-6 py-4 text-sm text-gray-300">143</td>
+                <td className="px-6 py-4 text-sm text-gray-300">1200</td>
                 <td className="px-6 py-4 text-sm">
-                <button>
+                <button className="pr-2">
                     <EditRectangle/>
                   </button>
                   <button>
