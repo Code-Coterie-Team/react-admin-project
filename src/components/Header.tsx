@@ -10,7 +10,7 @@ console.log(location.pathname,"title header")
         } else if (location.pathname === "/products") {
             return "Products"
         }else if (location.pathname === "/user") {
-            return "User"
+            return "Users"
         }else if (location.pathname === "/sales") {
             return "Sales Dashboard"
         }else if (location.pathname === "/orders") {
@@ -23,7 +23,7 @@ console.log(location.pathname,"title header")
 
     }
     return (
-        <h1 className="font-bold border-b-[1px] border-solid border-grayb py-4 px-8 text-[1.5rem]">{headeTitle()}</h1>
+        <h1 className="font-semibold border-b-[1px] border-solid border-grayb py-4 px-8 text-[1.5rem]">{headeTitle()}</h1>
     )
 }
 
