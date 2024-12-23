@@ -14,7 +14,7 @@ const Sidbar = () => {
 
                 <Link to="/">
                     <div className="overView flex p-4 mb-2 hover:bg-bgHover rounded-lg">
-                        <BarChart01 />
+                        <BarChart01 className="text-indigo-600" width="1.5rem" height="1.rem"/>
                         <span className="pl-3 font-medium ">
                             Overview
                         </span>

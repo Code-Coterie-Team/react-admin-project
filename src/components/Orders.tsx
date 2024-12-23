@@ -6,7 +6,7 @@ function Orders() {
         <div className='productPage main py-6 px-8'>
             <div className='grid grid-cols-4 gap-3 pb-8'>
                 <Panel icon={<Cart />} title="Total Orders" amount={1234} type="" />
-                <Panel icon={<Alarm className="text-yellow-400" width="2rem" height="2rem"/>} title="Pending Orders" amount={56} type="" />
+                <Panel icon={<Alarm className="text-yellow-500" width="1.5rem" height="1.5rem"/>} title="Pending Orders" amount={56} type="" />
                 <Panel icon={<CheckMarkCircle />} title="Completed Orders" amount={1178} type="" />
                 <Panel icon={<Dollar />} title="Total Revenue" amount={98765} type="aset" />
             </div>

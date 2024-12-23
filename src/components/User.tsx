@@ -6,7 +6,7 @@ function User() {
         <div className='userPage main py-6 px-8'>
 
             <div className='grid grid-cols-4 gap-3 pb-8'>
-                <Panel icon={<Users />} title="Total Users" amount={152845} type="aset" />
+                <Panel icon={<Users  />} title="Total Users" amount={152845} type="aset" />
                 <Panel icon={<UserAdd />} title="Total Users" amount={152845} type="" />
                 <Panel icon={<CheckMarkCircle />} title="Active Users" amount={98520} type="" />
                 <Panel icon={<UserRemove01 />} title="Churn Rate" amount={2.4} type="persent" />
