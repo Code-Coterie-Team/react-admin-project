@@ -23,8 +23,12 @@ import Notification03 from "./notification03.svg?react";
 import Lock01 from "./lock01.svg?react";
 import Help from "./help.svg?react";
 import Plus from "./plus.svg?react";
+import ArrowUp from "./arrowUp.svg?react";
+import ArrowDown from "./arrowDown.svg?react"
 
 export {
+  ArrowDown,
+  ArrowUp,
   Plus,
   Eyse,
   PackageBox06,

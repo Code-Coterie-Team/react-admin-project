@@ -1,16 +1,108 @@
 // import React from 'react'
-import { Dollar, LineChart, ShoppingBag, Users } from "../icons";
+import { ArrowDown, ArrowUp, Dollar, Eyse, LineChart, ShoppingBag, Users } from "../icons";
 import PanelAnalytics from "./PanelAnalytics";
 
 function Analytics() {
   return (
     <div className="analyticsPage main py-6 px-8">
       <div className="grid grid-cols-4 gap-3 pb-8">
-        <PanelAnalytics />
+        <PanelAnalytics
+          icon={
+            <Dollar
+              className="text-green-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          bgIcon="green"
+          title="Revenue"
+          amount={1234567}
+          type="aset"
+          icomMountLastPeriod={
+            <ArrowUp
+              className="text-green-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          amountLastPeriod={12.5}
+          lastPeriod="vs last period"
+          typeLastPeriod="up"
+        />
+        <PanelAnalytics
+          icon={
+            <Users
+              className="text-green-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          bgIcon="green"
+          title="Users"
+          amount={45678}
+          type=""
+          icomMountLastPeriod={
+            <ArrowUp
+              className="text-green-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          amountLastPeriod={8.3}
+          lastPeriod="vs last period"
+          typeLastPeriod="up"
+        />
+        <PanelAnalytics
+          icon={
+            <ShoppingBag
+              className="text-red-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          bgIcon="red"
+          title="Orders"
+          amount={9876}
+          type="aset"
+          icomMountLastPeriod={
+            <ArrowDown
+              className="text-red-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          amountLastPeriod={3.2}
+          lastPeriod="vs last period"
+          typeLastPeriod="down"
+        />
+        <PanelAnalytics
+          icon={
+            <Eyse
+              className="text-green-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          bgIcon="green"
+          title="Page Views"
+          amount={1234567}
+          type="aset"
+          icomMountLastPeriod={
+            <ArrowUp
+              className="text-green-500"
+              width="1.5rem"
+              height="1.5rem"
+            />
+          }
+          amountLastPeriod={15.7}
+          lastPeriod="vs last period"
+          typeLastPeriod="up"
+        />
       </div>
       <div className="revenueVsTarget flex justify-between items-center bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid mb-6">
         <h2>Revenue vs Target</h2>
-        <select className="bg-gray-700 text-white py-1 px-3 rounded-md font-semibold focus:outline-none "
+        <select
+          className="bg-gray-700 text-white py-1 px-3 rounded-md font-semibold focus:outline-none "
           name=""
           id=""
         >
