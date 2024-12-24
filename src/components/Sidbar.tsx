@@ -76,7 +76,7 @@ const Sidbar = () => {
             <span className="pl-3 font-medium ">Analytics</span>
           </div>
         </Link>
-        <Link to="/setting">
+        <Link to="/settings">
           <div className="setting flex p-4 hover:bg-bgHover rounded-lg">
             <Setting className="text-teal-400"
               width="1.5rem"

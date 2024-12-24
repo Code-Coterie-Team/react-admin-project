@@ -2,7 +2,6 @@ import { useLocation } from "react-router-dom"
 
 const Header = () => {
     const location = useLocation();
-console.log(location.pathname,"title header")
 
     const headeTitle  = () => {
         if (location.pathname === "/") {
@@ -17,8 +16,8 @@ console.log(location.pathname,"title header")
             return "Orders"
         }else if (location.pathname === "/analytics") {
             return "Analytics Dashboard"
-        }else if (location.pathname === "/setting") {
-            return "Setting"
+        }else if (location.pathname === "/settings") {
+            return "Settings"
         }
 
     }
