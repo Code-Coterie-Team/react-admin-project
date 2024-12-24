@@ -70,7 +70,7 @@ const Sidbar = () => {
         </Link>
         <Link to="/analytics">
           <div className="analytics mb-2 flex  p-4 hover:bg-bgHover rounded-lg">
-            <LineChart className="text-yellow-500"
+            <LineChart className="text-blue-500"
               width="1.5rem"
               height="1.5rem"/>
             <span className="pl-3 font-medium ">Analytics</span>
@@ -78,7 +78,7 @@ const Sidbar = () => {
         </Link>
         <Link to="/setting">
           <div className="setting flex p-4 hover:bg-bgHover rounded-lg">
-            <Setting className="text-yellow-500"
+            <Setting className="text-teal-400"
               width="1.5rem"
               height="1.5rem"/>
             <span className="pl-3 font-medium ">Setting</span>
