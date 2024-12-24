@@ -24,7 +24,7 @@ const Sidbar = () => {
             <BarChart01
               className="text-indigo-600"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
             <span className="pl-3 font-medium ">Overview</span>
           </div>
@@ -35,7 +35,7 @@ const Sidbar = () => {
             <ShoppingBag
               className="text-purple-600"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
             <span className="pl-3 font-medium ">Products</span>
           </div>
@@ -45,7 +45,7 @@ const Sidbar = () => {
             <Users
               className="text-pink-500"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
             <span className="pl-3 font-medium ">Users</span>
           </div>
@@ -70,13 +70,17 @@ const Sidbar = () => {
         </Link>
         <Link to="/analytics">
           <div className="analytics mb-2 flex  p-4 hover:bg-bgHover rounded-lg">
-            <LineChart />
+            <LineChart className="text-yellow-500"
+              width="1.5rem"
+              height="1.5rem"/>
             <span className="pl-3 font-medium ">Analytics</span>
           </div>
         </Link>
         <Link to="/setting">
           <div className="setting flex p-4 hover:bg-bgHover rounded-lg">
-            <Setting />
+            <Setting className="text-yellow-500"
+              width="1.5rem"
+              height="1.5rem"/>
             <span className="pl-3 font-medium ">Setting</span>
           </div>
         </Link>
