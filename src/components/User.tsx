@@ -7,6 +7,9 @@ import {
   CheckMarkCircle,
   Search02,
 } from "../icons";
+import ChartUserGrowth from "./chartUser/ChartUserGrowth";
+import ChartUserActivityHeatmap from "./chartUser/ChartUserActivityHeatmap";
+import ChartUserDemographics from "./chartUser/ChartUserDemographics";
 function User() {
   return (
     <div className="userPage main py-6 px-8">
@@ -239,13 +242,22 @@ function User() {
       </div>
       <div className="chartProducts grid grid-cols-2 gap-4">
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartproducts
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            User Growth
+          </h2>
+          <ChartUserGrowth />
         </div>
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartProducts
+        <h2 className="text-lg font-medium pb-4 text-gray-100">
+        User Activity Heatmap
+          </h2>
+          <ChartUserActivityHeatmap/>
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartProducts
+        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <h2 className=" text-lg font-medium pb-4 text-gray-100">
+        User Demographics
+          </h2>
+          <ChartUserDemographics/>
         </div>
       </div>
     </div>

@@ -8,20 +8,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-function ChartSalesOverview() {
+function ChartUserGrowth() {
   const data = [
-    { name: "Jul", sales: 4200 },
-    { name: "Aug", sales: 3800 },
-    { name: "Sep", sales: 5100 },
-    { name: "Oct", sales: 4600 },
-    { name: "Nov", sales: 5400 },
-    { name: "Dec", sales: 7200 },
-    { name: "Jan", sales: 6100 },
-    { name: "Feb", sales: 5900 },
-    { name: "Mar", sales: 6800 },
-    { name: "Apr", sales: 6300 },
-    { name: "May", sales: 7100 },
-    { name: "Jun", sales: 7500 },
+    { name: "Jan", sales: 1000 },
+    { name: "Feb", sales: 1500 },
+    { name: "Mar", sales: 2000 },
+    { name: "Apr", sales: 3000 },
+    { name: "May", sales: 4000 },
+    { name: "Jun", sales: 5000 },
   ];
 
   return (
@@ -37,17 +31,27 @@ function ChartSalesOverview() {
           <Line
             type="monotone"
             dataKey="sales"
+            // stroke="#d1d5db" // رنگ خط نمودار (خاکی روشن)
             stroke="#8884d8" // رنگ خط
             strokeWidth={3} // پهنای خط
             activeDot={{ r: 8, fill: "#6366f1" }}
             dot={{ r: 8, fill: "#6366f1" }} // دایره اصلی
+            strokeDasharray="0 0" // سبک خط تیره
           />
           <CartesianGrid
             stroke="#e5e5e5"
             strokeDasharray="5 5"
           />
-          <XAxis dataKey="name" />
-          <YAxis />
+          <XAxis
+            dataKey="name"
+            // stroke="#000000" // رنگ مشکی برای محور x
+            // tick={{ stroke: "#000000" }} // رنگ مشکی برای تیک‌ها
+          />
+
+          <YAxis
+          // stroke="#000000" // رنگ مشکی برای محور y
+          // tick={{ stroke: "#000000" }} // رنگ مشکی برای تیک‌ها
+          />
           <Tooltip />
         </LineChart>
       </ResponsiveContainer>
@@ -55,4 +59,4 @@ function ChartSalesOverview() {
   );
 }
 
-export default ChartSalesOverview;
+export default ChartUserGrowth;

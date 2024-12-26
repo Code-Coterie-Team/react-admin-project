@@ -1,7 +1,8 @@
 import Panel from "./Panel";
 import { Flash, Users, ShoppingBag, BarChart01 } from "../icons";
-import ChartSalesOverview from "./chartSalesOverview";
-import ChartCategoryDistribution from "./ChartCategoryDistribution";
+import ChartSalesOverview from "./chartOverview/ChartSalesOverview";
+import ChartCategoryDistribution from "./chartOverview/ChartCategoryDistribution";
+import ChartSalesByChannel from "./chartOverview/ChartSalesByChannel";
 
 function Overview() {
   return (
@@ -70,8 +71,11 @@ function Overview() {
           </h2>
           <ChartCategoryDistribution />
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartOverview03
+        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <h2 className="text-lg font-medium pb-4 text-gray-100">
+        Sales by Channel
+          </h2>
+          <ChartSalesByChannel/>
         </div>
       </div>
     </div>

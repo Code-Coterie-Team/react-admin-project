@@ -9,6 +9,8 @@ import {
   WarningError,
   Dollar,
 } from "../icons";
+import ChartSalesTrend from "./chartProducts/ChartSalesTrend";
+import ChartCategoryDistribution from "./chartProducts/ChartCategoryDistribution";
 
 const Products = () => {
   return (
@@ -187,10 +189,16 @@ const Products = () => {
       </div>
       <div className="chartProducts grid grid-cols-2 gap-4">
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartproducts
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+          Sales Trend
+          </h2>
+          <ChartSalesTrend />
         </div>
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartProducts
+        <h2 className="text-lg font-medium pb-4 text-gray-100">
+        Category Distribution
+          </h2>
+          <ChartCategoryDistribution />
         </div>
       </div>
     </div>
