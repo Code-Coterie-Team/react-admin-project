@@ -53,7 +53,21 @@ const renderLabel = (entry:any) => {
               /> // رنگ هر بخش
             ))}
           </Pie>
-          <Tooltip />
+          <Tooltip 
+               contentStyle={{
+                backgroundColor: "#333", // پس‌زمینه تیره
+                borderRadius: "5px",
+                borderColor:"#5c6877",
+                padding: "10px",
+                opacity:"80%",
+              }}
+              labelStyle={{
+                color: "white", // رنگ سفید برای برچسب
+              }}
+              itemStyle={{
+                color: "white", // رنگ سفید برای متن مقادیر
+              }}
+          />
           <Legend />
         </PieChart>
       </ResponsiveContainer>

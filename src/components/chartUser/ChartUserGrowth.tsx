@@ -52,7 +52,21 @@ function ChartUserGrowth() {
           // stroke="#000000" // رنگ مشکی برای محور y
           // tick={{ stroke: "#000000" }} // رنگ مشکی برای تیک‌ها
           />
-          <Tooltip />
+          <Tooltip 
+             contentStyle={{
+              backgroundColor: "#333", // پس‌زمینه تیره
+              borderRadius: "5px",
+              borderColor:"#5c6877",
+              padding: "10px",
+              opacity:"80%",
+            }}
+            labelStyle={{
+              color: "white", // رنگ سفید برای برچسب
+            }}
+            itemStyle={{
+              color: "white", // رنگ سفید برای متن مقادیر
+            }}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
