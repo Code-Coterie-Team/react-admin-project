@@ -6,6 +6,8 @@ import {
   Eyse,
   Search02,
 } from "../icons";
+import ChartDailyOrders from "./chartOrders/ChartDailyOrders";
+import ChartOrderStatusDistribution from "./chartOrders/ChartOrderStatusDistribution";
 import Panel from "./Panel";
 
 function Orders() {
@@ -63,10 +65,16 @@ function Orders() {
       </div>
       <div className="chartProducts mb-8 grid grid-cols-2 gap-4">
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartproducts
+        <h2 className="text-lg font-medium pb-4 text-gray-100">
+        Daily Orders
+          </h2>
+          <ChartDailyOrders/>
         </div>
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartProducts
+        <h2 className="text-lg font-medium pb-4 text-gray-100">
+        Order Status Distribution
+          </h2>
+          <ChartOrderStatusDistribution/>
         </div>
       </div>
       <div className="productList  bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">

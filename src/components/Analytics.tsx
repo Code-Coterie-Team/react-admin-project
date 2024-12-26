@@ -100,7 +100,7 @@ function Analytics() {
         />
       </div>
       <div className="revenueVsTarget flex justify-between items-center bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid mb-6">
-        <h2>Revenue vs Target</h2>
+        <h2 className="text-lg font-medium pb-4 text-gray-100">Revenue vs Target</h2>
         <select
           className="bg-gray-700 text-white py-1 px-3 rounded-md font-semibold focus:outline-none "
           name=""
