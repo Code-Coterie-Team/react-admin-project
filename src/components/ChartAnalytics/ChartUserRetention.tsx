@@ -9,22 +9,39 @@ import {
   ResponsiveContainer,
   ReferenceLine,
 } from "recharts";
+function ChartUserRetention() {
 
-function ChartDailyOrders() {
   const data = [
-    { name: "07/01", orders: 45 },
-    { name: "07/02", orders: 52 },
-    { name: "07/03", orders: 49 },
-    { name: "07/04", orders: 60 },
-    { name: "07/05", orders: 55 },
-    { name: "07/06", orders: 58 },
-    { name: "07/07", orders: 62 },
+    { name: "Week 1", retention: 100 },
+    { name: "Week 2", retention: 75 },
+    { name: "Week 3", retention: 60 },
+    { name: "Week 4", retention: 50 },
+    { name: "Week 5", retention: 45 },
+    { name: "Week 6", retention: 40 },
+    { name: "Week 7", retention: null },
+    { name: "Week 8", retention: 35 },
   ];
-
-
+// تابع سفارشی برای نمایش نام‌ها در محور X
+  const renderXAxisTick = (props: { x: any; y: any; payload: any; }) => {
+    const { x, y, payload } = props;
+    return (
+      <g transform={`translate(${x},${y})`}>
+        <text
+          x={0}
+          y={0}
+          dy={16}
+          textAnchor="middle"
+          fill="#666"
+        >
+          {payload.value === "Week 7" ? "" : payload.value} {/* مخفی کردن Week 7 */}
+        </text>
+      </g>
+    );
+  };
+  
   return (
     <div className="chart-container h-80">
-      <ResponsiveContainer
+       <ResponsiveContainer
         width="100%"
         height="100%"
       >
@@ -39,7 +56,7 @@ function ChartDailyOrders() {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" tick={renderXAxisTick} /> {/* استفاده از تابع سفارشی */}
           <YAxis />
           <Tooltip
              contentStyle={{
@@ -67,7 +84,7 @@ function ChartDailyOrders() {
           <Line
             connectNulls
             type="monotone"
-            dataKey="orders"
+            dataKey="retention"
             stroke="#8884d8" // رنگ خط
             strokeWidth={3} // پهنای خط
            
@@ -76,7 +93,7 @@ function ChartDailyOrders() {
         </LineChart>
       </ResponsiveContainer>
     </div>
-  );
+  )
 }
 
-export default ChartDailyOrders;
+export default ChartUserRetention

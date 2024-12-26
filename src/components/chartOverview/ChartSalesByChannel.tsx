@@ -64,7 +64,15 @@ function ChartSalesByChannel() {
                 color: "white", // رنگ سفید برای متن مقادیر
               }}
           />
-          <Legend />
+          
+          <Legend 
+            layout="horizontal" // چیدمان افقی
+            verticalAlign="bottom" // قرارگیری در پایین
+            align="center" // مرکز چین
+            wrapperStyle={{
+              paddingTop: '10px', // فاصله از نمودار
+            }}
+          />
       
          < Bar  dataKey="value" />
         </BarChart>

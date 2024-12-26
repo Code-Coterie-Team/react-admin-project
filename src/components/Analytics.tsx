@@ -1,5 +1,18 @@
 // import React from 'react'
-import { ArrowDown, ArrowUp, Dollar, Eyse, LineChart, ShoppingBag, Users } from "../icons";
+import {
+  ArrowDown,
+  ArrowUp,
+  Dollar,
+  Eyse,
+  LineChart,
+  ShoppingBag,
+  Users,
+} from "../icons";
+import ChartChannelPerformance from "./ChartAnalytics/ChartChannelPerformance";
+import ChartCustomerSegmentation from "./ChartAnalytics/ChartCustomerSegmentation";
+import ChartProductPerformance from "./ChartAnalytics/ChartProductPerformance";
+import ChartRevenueVsTarget from "./ChartAnalytics/ChartRevenueVsTarget";
+import ChartUserRetention from "./ChartAnalytics/ChartUserRetention";
 import PanelAnalytics from "./PanelAnalytics";
 
 function Analytics() {
@@ -99,31 +112,48 @@ function Analytics() {
           typeLastPeriod="up"
         />
       </div>
-      <div className="revenueVsTarget flex justify-between items-center bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid mb-6">
-        <h2 className="text-lg font-medium pb-4 text-gray-100">Revenue vs Target</h2>
-        <select
-          className="bg-gray-700 text-white py-1 px-3 rounded-md font-semibold focus:outline-none "
-          name=""
-          id=""
-        >
-          <option>This Week</option>
-          <option>This Month</option>
-          <option>This Quarter</option>
-          <option>This Year</option>
-        </select>
+      <div className="revenueVsTarget  bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid mb-6">
+        <div className="flex justify-between items-center">
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Revenue vs Target
+          </h2>
+          <select
+            className="bg-gray-700 text-white py-1 px-3 rounded-md font-semibold focus:outline-none "
+            name=""
+            id=""
+          >
+            <option>This Week</option>
+            <option>This Month</option>
+            <option>This Quarter</option>
+            <option>This Year</option>
+          </select>
+        </div>
+        <ChartRevenueVsTarget />
       </div>
-      <div className="chartAnalytics grid grid-cols-2 gap-4 mb-8">
+      <div className="chartAnalytics grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartAnalytics
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Channel Performance
+          </h2>
+          <ChartChannelPerformance />
         </div>
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartAnalytics
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Product Performance
+          </h2>
+          <ChartProductPerformance />
         </div>
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartAnalytics
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            User Retention
+          </h2>
+          <ChartUserRetention />
         </div>
         <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-          chartAnalytics
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Customer Segmentation
+          </h2>
+          <ChartCustomerSegmentation/>
         </div>
       </div>
 

@@ -1,16 +1,17 @@
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer, Cell } from "recharts";
 
-function ChartSalesByCategory() {
+function ChartChannelPerformance() {
 
   const data01 = [
-    { name: "Electronics", value: 400 },
-    { name: "Clothing", value: 300 },
-    { name: "Home & Garden", value: 200 },
-    { name: "Books", value: 100 },
-    { name: "Others", value: 150 },
+    { name: "Organic Search", value: 4000 },
+    { name: "Paid Search", value: 3000 },
+    { name: "Direct", value: 2000 },
+    { name: "Social Media", value: 2780 },
+    { name: "Referral", value: 1890 },
+    { name: "Email ", value: 2390 },
   ];
 
-  const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
+  const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE","#00C49F"];
   // تابع سفارشی برای نمایش متن کنار هر بخش
   const renderLabel = (entry: { value: number; name: string; }) => {
     const percentage = ((entry.value / data01.reduce((total, current) => total + current.value, 0)) * 100).toFixed(1);
@@ -18,7 +19,7 @@ function ChartSalesByCategory() {
   };
 
   return (
-    <div className="chart-container h-80">
+        <div className="chart-container h-80">
       <ResponsiveContainer
         width="100%"
         height="100%"
@@ -26,9 +27,11 @@ function ChartSalesByCategory() {
         <PieChart
           width={400}
           height={400}
+          
         >
             <Pie
             dataKey="value"
+            
             isAnimationActive={false}
             data={data01}
             cx="50%"
@@ -60,7 +63,15 @@ function ChartSalesByCategory() {
             layout="horizontal"         // برای نمایش افقی
             verticalAlign="bottom"       // برای قرار دادن در پایین
             align="center"               // برای وسط چین کردن
-            wrapperStyle={{ paddingTop: 20 }} // کمی فاصله از نمودار
+             wrapperStyle={{ paddingTop: 20,
+            
+          }}
+            // wrapperStyle={{
+            //   paddingTop: '10px', // فاصله از نمودار
+            //   fontWeight: 'bold', // تغییر وزن فونت به بولد
+            //   fontSize: '14px', // اندازه فونت
+            //   color: '#333', // رنگ متن
+            // }} // کمی فاصله از نمودار
           />
           
         </PieChart>
@@ -69,4 +80,4 @@ function ChartSalesByCategory() {
   )
 }
 
-export default ChartSalesByCategory
+export default ChartChannelPerformance

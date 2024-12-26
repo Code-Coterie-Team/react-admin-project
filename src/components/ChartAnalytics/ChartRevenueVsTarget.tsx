@@ -1,35 +1,32 @@
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
-  ReferenceLine,
+  Legend,
 } from "recharts";
 
-function ChartDailyOrders() {
+function ChartRevenueVsTarget() {
   const data = [
-    { name: "07/01", orders: 45 },
-    { name: "07/02", orders: 52 },
-    { name: "07/03", orders: 49 },
-    { name: "07/04", orders: 60 },
-    { name: "07/05", orders: 55 },
-    { name: "07/06", orders: 58 },
-    { name: "07/07", orders: 62 },
+    { name: "Jan", revenue: 4000, target: 3800 },
+    { name: "Feb", revenue: 3000, target: 3200 },
+    { name: "Mar", revenue: 5000, target: 4500 },
+    { name: "Apr", revenue: 4500, target: 4200 },
+    { name: "May", revenue: 6000, target: 5500 },
+    { name: "Jun", revenue: 5500, target: 5800 },
+    { name: "Jul", revenue: 7000, target: 6500 },
   ];
 
-
   return (
-    <div className="chart-container h-80">
+    <div className="chart-container lg:h-[400px] h-80">
       <ResponsiveContainer
         width="100%"
         height="100%"
       >
-        <LineChart
-        
+        <AreaChart
           data={data}
           margin={{
             top: 10,
@@ -42,12 +39,12 @@ function ChartDailyOrders() {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip
-             contentStyle={{
+            contentStyle={{
               backgroundColor: "#333", // پس‌زمینه تیره
               borderRadius: "5px",
-              borderColor:"#5c6877",
+              borderColor: "#5c6877",
               padding: "10px",
-              opacity:"80%",
+              opacity: "80%",
             }}
             labelStyle={{
               color: "white", // رنگ سفید برای برچسب
@@ -55,8 +52,8 @@ function ChartDailyOrders() {
             itemStyle={{
               color: "white", // رنگ سفید برای متن مقادیر
             }}
-        />
-          <Legend
+          />
+           <Legend
             verticalAlign="bottom"
             align="center"
             wrapperStyle={{
@@ -64,19 +61,24 @@ function ChartDailyOrders() {
               paddingBottom: '10px',
             }}
           />
-          <Line
-            connectNulls
+          <Area
             type="monotone"
-            dataKey="orders"
-            stroke="#8884d8" // رنگ خط
-            strokeWidth={3} // پهنای خط
-           
-            fill="#fff"
+            dataKey="revenue"
+            stroke="#8B5CF6"
+            fill="#8B5CF6"
+            fillOpacity={0.3}
           />
-        </LineChart>
+          <Area
+            type="monotone"
+            dataKey="target"
+            stroke="#10B981"
+            fill="#10B981"
+            fillOpacity={0.3}
+          />
+        </AreaChart>
       </ResponsiveContainer>
     </div>
   );
 }
 
-export default ChartDailyOrders;
+export default ChartRevenueVsTarget;

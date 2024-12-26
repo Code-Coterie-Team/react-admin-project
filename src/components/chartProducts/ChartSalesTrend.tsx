@@ -6,6 +6,7 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
+  Legend,
 } from "recharts";
 function ChartSalesTrend() {
   const data = [
@@ -56,6 +57,14 @@ function ChartSalesTrend() {
               itemStyle={{
                 color: "white", // رنگ سفید برای متن مقادیر
               }}
+          />
+            <Legend
+            verticalAlign="bottom"
+            align="center"
+            wrapperStyle={{
+              paddingTop: '10px',
+              paddingBottom: '10px',
+            }}
           />
         </LineChart>
       </ResponsiveContainer>
