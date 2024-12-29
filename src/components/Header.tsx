@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom"
 
 const Header = () => {
     const location = useLocation();
+    
 
     const headeTitle  = () => {
         if (location.pathname === "/") {

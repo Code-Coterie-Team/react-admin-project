@@ -1,8 +1,8 @@
-import Panel from "./Panel";
-import { Flash, Users, ShoppingBag, BarChart01 } from "../icons";
-import ChartSalesOverview from "./chartOverview/ChartSalesOverview";
-import ChartCategoryDistribution from "./chartOverview/ChartCategoryDistribution";
-import ChartSalesByChannel from "./chartOverview/ChartSalesByChannel";
+import Panel from "../../components/Panel";
+import { Flash, Users, ShoppingBag, BarChart01 } from "../../icons";
+import ChartSalesOverview from "./components/ChartSalesOverview";
+import ChartCategoryDistribution from "./components/ChartCategoryDistributionOverview";
+import ChartSalesByChannel from "./components/ChartSalesByChannelOverview";
 
 function Overview() {
   return (
@@ -13,7 +13,7 @@ function Overview() {
             <Flash
               className="text-indigo-600"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
           }
           title="Total Sales"
@@ -25,7 +25,7 @@ function Overview() {
             <Users
               className="text-purple-600"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
           }
           title="New Users"
@@ -37,7 +37,7 @@ function Overview() {
             <ShoppingBag
               className="text-pink-500"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
           }
           title="Total Products"
@@ -72,10 +72,10 @@ function Overview() {
           <ChartCategoryDistribution />
         </div>
         <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-        <h2 className="text-lg font-medium pb-4 text-gray-100">
-        Sales by Channel
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Sales by Channel
           </h2>
-          <ChartSalesByChannel/>
+          <ChartSalesByChannel />
         </div>
       </div>
     </div>

@@ -5,10 +5,10 @@ import {
   Dollar,
   Eyse,
   Search02,
-} from "../icons";
-import ChartDailyOrders from "./chartOrders/ChartDailyOrders";
-import ChartOrderStatusDistribution from "./chartOrders/ChartOrderStatusDistribution";
-import Panel from "./Panel";
+} from "../../icons";
+import ChartDailyOrders from "./components/ChartDailyOrders";
+import ChartOrderStatusDistribution from "./components/ChartOrderStatusDistribution";
+import Panel from "../../components/Panel";
 
 function Orders() {
   return (
@@ -19,7 +19,7 @@ function Orders() {
             <ShoppingBag
               className="text-indigo-600"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
           }
           title="Total Orders"

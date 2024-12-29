@@ -10,11 +10,24 @@ import {
   LineChart,
   Setting,
 } from "../icons";
+import { useStore } from "../store";
 
 const Sidbar = () => {
+  const toggleMenuBar = useStore((state) => state.toggleMenuBar);
+  const menuBar = useStore((state) => state.menuBar);
+ 
   return (
-    <div className="sidbar p-4 border-r-[1px] border-solid border-grayb col-span-2 h-full w-full">
-      <button className="icon-menu hover:bg-bgHover hover:rounded-full">
+    <div
+      className={`sidbar p-4 border-r-[1px] border-solid border-grayb h-full w-full
+     ${ menuBar? "col-span-1" : "col-span-2"}
+     `}
+    >
+      <button
+        onClick={() => {
+          toggleMenuBar();
+        }}
+        className="icon-menu hover:bg-bgHover hover:rounded-full"
+      >
         <MenuLineHorizontal />
       </button>
 
@@ -26,7 +39,8 @@ const Sidbar = () => {
               width="1.5rem"
               height="1.5rem"
             />
-            <span className="pl-3 font-medium ">Overview</span>
+
+            {menuBar || <span className="pl-3 font-medium">Overview</span>}
           </div>
         </Link>
 
@@ -37,7 +51,7 @@ const Sidbar = () => {
               width="1.5rem"
               height="1.5rem"
             />
-            <span className="pl-3 font-medium ">Products</span>
+            {menuBar || <span className="pl-3 font-medium ">Products</span>}
           </div>
         </Link>
         <Link to="/user">
@@ -47,7 +61,7 @@ const Sidbar = () => {
               width="1.5rem"
               height="1.5rem"
             />
-            <span className="pl-3 font-medium ">Users</span>
+            {menuBar || <span className="pl-3 font-medium ">Users</span>}
           </div>
         </Link>
         <Link to="/sales">
@@ -57,31 +71,37 @@ const Sidbar = () => {
               width="1.5rem"
               height="1.5rem"
             />
-            <span className="pl-3 font-medium ">Sales</span>
+            {menuBar || <span className="pl-3 font-medium ">Sales</span>}
           </div>
         </Link>
         <Link to="/orders">
           <div className="orders mb-2 flex  p-4 hover:bg-bgHover rounded-lg">
-            <Cart className="text-yellow-500"
+            <Cart
+              className="text-yellow-500"
               width="1.5rem"
-              height="1.5rem"/>
-            <span className="pl-3 font-medium ">Orders</span>
+              height="1.5rem"
+            />
+            {menuBar || <span className="pl-3 font-medium ">Orders</span>}
           </div>
         </Link>
         <Link to="/analytics">
           <div className="analytics mb-2 flex  p-4 hover:bg-bgHover rounded-lg">
-            <LineChart className="text-blue-500"
+            <LineChart
+              className="text-blue-500"
               width="1.5rem"
-              height="1.5rem"/>
-            <span className="pl-3 font-medium ">Analytics</span>
+              height="1.5rem"
+            />
+            {menuBar || <span className="pl-3 font-medium ">Analytics</span>}
           </div>
         </Link>
         <Link to="/settings">
           <div className="setting flex p-4 hover:bg-bgHover rounded-lg">
-            <Setting className="text-teal-400"
+            <Setting
+              className="text-teal-400"
               width="1.5rem"
-              height="1.5rem"/>
-            <span className="pl-3 font-medium ">Setting</span>
+              height="1.5rem"
+            />
+            {menuBar || <span className="pl-3 font-medium ">Setting</span>}
           </div>
         </Link>
       </nav>

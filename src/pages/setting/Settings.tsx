@@ -1,7 +1,7 @@
 // import React from 'react'
 
 import { useState } from "react";
-import { Help, Lock01, Notification03, Plus, Trash, User } from "../icons";
+import { Help, Lock01, Notification03, Plus, Trash, User } from "../../icons";
 
 function Settings() {
   const [notificationPush, setNotificationPush] = useState(true);
@@ -253,7 +253,7 @@ function Settings() {
 
         <button className="flex gap-2 items-center text-indigo-400 hover:text-indigo-300">
           <Plus
-            className="text-indigo-400 hover:text-indigo-300"
+         
             width="1.25rem"
             height="1.25rem"
           />

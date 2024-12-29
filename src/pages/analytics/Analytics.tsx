@@ -7,13 +7,13 @@ import {
   LineChart,
   ShoppingBag,
   Users,
-} from "../icons";
-import ChartChannelPerformance from "./ChartAnalytics/ChartChannelPerformance";
-import ChartCustomerSegmentation from "./ChartAnalytics/ChartCustomerSegmentation";
-import ChartProductPerformance from "./ChartAnalytics/ChartProductPerformance";
-import ChartRevenueVsTarget from "./ChartAnalytics/ChartRevenueVsTarget";
-import ChartUserRetention from "./ChartAnalytics/ChartUserRetention";
-import PanelAnalytics from "./PanelAnalytics";
+} from "../../icons";
+import ChartChannelPerformance from "./components/ChartChannelPerformanceanAlytics";
+import ChartCustomerSegmentation from "./components/ChartCustomerSegmentationAlytics";
+import ChartProductPerformance from "./components/ChartChannelPerformanceanAlytics";
+import ChartRevenueVsTarget from "./components/ChartRevenueVsTargetAlytics";
+import ChartUserRetention from "./components/ChartUserRetentionAlytics";
+import PanelAnalytics from "../../components/PanelAnalytics";
 
 function Analytics() {
   return (

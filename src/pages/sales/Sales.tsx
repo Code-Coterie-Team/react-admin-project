@@ -1,10 +1,10 @@
 // import React from 'react'
 
-import { Dollar, Cart, LineChart, Layout06 } from "../icons";
-import ChartDailySalesTrend from "./chartSales/ChartDailySalesTrend";
-import ChartSalesByCategory from "./chartSales/ChartSalesByCategory";
-import ChartSalesOverview from "./chartSales/ChartSalesOverview";
-import Panel from "./Panel";
+import { Dollar, Cart, LineChart, Layout06 } from "../../icons";
+import ChartDailySalesTrend from "./components/ChartDailySalesTrend";
+import ChartSalesByCategory from "./components/ChartSalesByCategory";
+import ChartSalesOverview from "./components/ChartSalesOverview";
+import Panel from "../../components/Panel";
 
 function Sales() {
   return (
@@ -15,7 +15,7 @@ function Sales() {
             <Dollar
               className="text-indigo-600"
               width="1.5rem"
-              height="1.rem"
+              height="1.5rem"
             />
           }
           title="Total Revenue"
@@ -94,5 +94,6 @@ function Sales() {
     </div>
   );
 }
+
 
 export default Sales;
