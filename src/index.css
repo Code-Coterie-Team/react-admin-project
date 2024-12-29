@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
- tr {
-    /* border-b-solid border-b-[1px] border-gray-700 */
-    border-bottom:solid 1px rgb(55,65,81);
+@layer components {
+  .tableBorderB {
+    /* border-bottom:solid 1px rgb(55,65,81); */
+    @apply border-b border-b-[rgb(55,65,81)];
+  }
+}
+body {
+  font-size: 14px;
+}
+tr {
+  /* move to teilwind */
+  border-bottom: solid 1px rgb(55, 65, 81);
 }
