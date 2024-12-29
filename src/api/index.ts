@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 const urlProducts =
-  "https://676ec0e7df5d7dac1ccb9be4.mockapi.io/api/products/products";
+  "https://676ec0e7df5d7dac1ccb9be4.mockapi.io/api/products/products/";
 const urlUsers= "https://676ec0e7df5d7dac1ccb9be4.mockapi.io/api/products/users";
 
 export const useGetAllProducts = () => {
