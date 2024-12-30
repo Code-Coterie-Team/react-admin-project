@@ -8,10 +8,9 @@
     @apply border-b border-b-[rgb(55,65,81)];
   }
 }
+tr:not(:last-child) {
+    @apply tableBorderB;
+}
 body {
   font-size: 14px;
-}
-tr {
-  /* move to teilwind */
-  border-bottom: solid 1px rgb(55, 65, 81);
 }

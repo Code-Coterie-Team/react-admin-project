@@ -96,7 +96,7 @@ function Orders() {
         <div className="tableProductList">
           <table className="border-collapse w-full ">
             <thead>
-              <tr>
+              <tr className="tableBorderB">
                 <th className="uppercase px-6 py-3 text-gray-400 text-xs tracking-wider text-left">
                   Order ID
                 </th>
@@ -118,7 +118,7 @@ function Orders() {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>
@@ -140,7 +140,7 @@ function Orders() {
                   </button>
                 </td>
               </tr>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>
@@ -160,7 +160,7 @@ function Orders() {
                   </button>
                 </td>
               </tr>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>
@@ -180,7 +180,7 @@ function Orders() {
                   </button>
                 </td>
               </tr>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>
@@ -200,7 +200,7 @@ function Orders() {
                   </button>
                 </td>
               </tr>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>
@@ -220,7 +220,7 @@ function Orders() {
                   </button>
                 </td>
               </tr>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>
@@ -240,7 +240,7 @@ function Orders() {
                   </button>
                 </td>
               </tr>
-              <tr>
+              <tr className="tableBorderB">
                 <td className="px-6 py-4 text-sm font-medium">ORD001</td>
                 <td className="px-6 py-4 text-sm font-medium">John Doe</td>
                 <td className="px-6 py-4 text-sm font-medium"> $235.40</td>

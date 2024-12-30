@@ -106,7 +106,7 @@ function User() {
         <div className="tableProductList">
           <table className="border-collapse w-full ">
             <thead>
-              <tr>
+              <tr className="tableBorderB">
                 <th className="uppercase px-6 py-3 text-gray-400 text-xs tracking-wider text-left">
                   Name
                 </th>
