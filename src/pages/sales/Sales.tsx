@@ -20,7 +20,7 @@ function Sales() {
           }
           title="Total Revenue"
           amount={1234567}
-          type="aset"
+          type="asset"
         />
         <Panel
           icon={
@@ -32,7 +32,7 @@ function Sales() {
           }
           title="Avg. Order Value"
           amount={78.9}
-          type="aset"
+          type="asset"
         />
         <Panel
           icon={
@@ -60,7 +60,7 @@ function Sales() {
         />
       </div>
       <div className="chartOverview grid grid-cols-2 gap-4">
-        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid">
+        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg font-medium pb-4 text-gray-100">
               Sales Overview
@@ -78,22 +78,21 @@ function Sales() {
           </div>
           <ChartSalesOverview />
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
           <h2 className="text-lg font-medium pb-4 text-gray-100">
             Sales by Category
           </h2>
           <ChartSalesByCategory />
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-        <h2 className="text-lg font-medium pb-4 text-gray-100">
-        Daily Sales Trend
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Daily Sales Trend
           </h2>
-          <ChartDailySalesTrend/>
+          <ChartDailySalesTrend />
         </div>
       </div>
     </div>
   );
 }
-
 
 export default Sales;
