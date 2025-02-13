@@ -18,7 +18,7 @@ function Overview() {
           }
           title="Total Sales"
           amount={12345}
-          type="aset"
+          type="asset"
         />
         <Panel
           icon={
@@ -58,20 +58,20 @@ function Overview() {
         />
       </div>
       <div className="chartOverview grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid">
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid">
           <h2 className="text-lg font-medium pb-4 text-gray-100">
             Sales Overview
           </h2>
 
           <ChartSalesOverview />
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
           <h2 className="text-lg font-medium pb-4 text-gray-100">
             Category Distribution
           </h2>
           <ChartCategoryDistribution />
         </div>
-        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
           <h2 className="text-lg font-medium pb-4 text-gray-100">
             Sales by Channel
           </h2>
