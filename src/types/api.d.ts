@@ -17,7 +17,7 @@ interface IAllUsersResponse {
 }
 interface IPanelAnalytic {
   icon: ReactNode;
-  bgIcon:string;
+  bgIcon: string;
   title: string;
   amount: number;
   type: string;
@@ -31,4 +31,8 @@ interface IPanelProps {
   title: string;
   amount: number;
   type: "persent" | "asset" | "";
+}
+interface ChartFrameworks {
+  title: string;
+  nameChart: ReactNode;
 }

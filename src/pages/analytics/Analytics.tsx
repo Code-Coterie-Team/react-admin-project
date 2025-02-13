@@ -14,6 +14,7 @@ import ChartCustomerSegmentation from "./components/ChartCustomerSegmentationAly
 import ChartRevenueVsTarget from "./components/ChartRevenueVsTargetAlytics";
 import ChartUserRetention from "./components/ChartUserRetentionAlytics";
 import PanelAnalytics from "../../components/PanelAnalytics";
+import ChartFramework from "../../components/ChartFramework";
 
 function Analytics() {
   const itemPanel = [
@@ -202,12 +203,7 @@ function Analytics() {
       </div>
       <div className="chartAnalytics grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
         {chartAnalytics.map((item) => (
-          <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
-            <h2 className="text-lg font-medium pb-4 text-gray-100">
-              {item.title}
-            </h2>
-            {item.nameChart}
-          </div>
+          <ChartFramework title={item.title} nameChart={item.nameChart}/>
         ))}
       </div>
 
