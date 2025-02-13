@@ -1,8 +1,14 @@
-function ChartFramework(props: ChartFrameworks) {
+function ChartFramework({ charts }: IChartFrameworksArray) {
   return (
-    <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
-      <h2 className="text-lg font-medium pb-4 text-gray-100">{props.title}</h2>
-      {props.nameChart}
+    <div className="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      {charts.map((item) => (
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            {item.title}
+          </h2>
+          {item.nameChart}
+        </div>
+      ))}
     </div>
   );
 }
