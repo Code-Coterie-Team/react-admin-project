@@ -60,24 +60,24 @@ function Orders() {
           }
           title="Total Revenue"
           amount={98765}
-          type="aset"
+          type="asset"
         />
       </div>
       <div className="chartProducts mb-8 grid grid-cols-2 gap-4">
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-        <h2 className="text-lg font-medium pb-4 text-gray-100">
-        Daily Orders
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Daily Orders
           </h2>
-          <ChartDailyOrders/>
+          <ChartDailyOrders />
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
-        <h2 className="text-lg font-medium pb-4 text-gray-100">
-        Order Status Distribution
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
+          <h2 className="text-lg font-medium pb-4 text-gray-100">
+            Order Status Distribution
           </h2>
-          <ChartOrderStatusDistribution/>
+          <ChartOrderStatusDistribution />
         </div>
       </div>
-      <div className="productList  bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+      <div className="productList  bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
         <div className="flex pb-7 justify-between items-center">
           <h2 className="text-xl text-gray-100 font-semibold">Order List</h2>
           <div className="search relative">
@@ -87,9 +87,11 @@ function Orders() {
               type="text"
             />
             <div className="absolute top-[0.625rem] left-2">
-              <Search02  className="text-gray-400"
-                      width="1.25rem"
-                      height="1.25rem"/>
+              <Search02
+                className="text-gray-400"
+                width="1.25rem"
+                height="1.25rem"
+              />
             </div>
           </div>
         </div>
@@ -154,9 +156,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
@@ -174,9 +178,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
@@ -194,9 +200,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
@@ -214,9 +222,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
@@ -234,9 +244,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
@@ -254,9 +266,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
@@ -274,9 +288,11 @@ function Orders() {
                 </td>
                 <td className="px-6 py-4">
                   <button>
-                    <Eyse    className="text-indigo-400"
+                    <Eyse
+                      className="text-indigo-400"
                       width="1.25rem"
-                      height="1.25rem"/>
+                      height="1.25rem"
+                    />
                   </button>
                 </td>
               </tr>
