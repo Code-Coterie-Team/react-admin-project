@@ -47,7 +47,7 @@ function User() {
           }
           title="Total Users"
           amount={152845}
-          type="aset"
+          type="asset"
         />
         <Panel
           icon={
@@ -86,7 +86,7 @@ function User() {
           type="persent"
         />
       </div>
-      <div className="users mb-8 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+      <div className="users mb-8 bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
         <div className="flex pb-7 justify-between items-center">
           <h2 className="text-xl text-gray-100 font-semibold">Users</h2>
           <div className="search relative">
@@ -140,17 +140,21 @@ function User() {
                   <td className="px-6 py-4 text-sm">{user.email}</td>
                   <td className="px-6 py-4">
                     <span className="bg-blue-800 font-semibold text-blue-100 rounded-full px-2 text-xs">
-                    {user.role}
+                      {user.role}
                     </span>
                   </td>
                   <td className="px-6 py-4">
-                    <span className="bg-green-800 font-semibold text-green-100 rounded-full px-2 text-xs">
-                    {user.status}
+                    <span className={`${user.status === "Active" ? "bg-green-800 " : "bg-red-800"} font-semibold text-green-100 rounded-full px-2 text-xs`}>
+                      {user.status}
                     </span>
                   </td>
                   <td className="px-6 py-4 text-sm">
-                    <button className="text-indigo-400 pr-2 hover:text-indigo-300">Edit</button>
-                    <button className="text-red-400 text-sm hover:text-indigo-300">Delete</button>
+                    <button className="text-indigo-400 pr-2 hover:text-indigo-300">
+                      Edit
+                    </button>
+                    <button className="text-red-400 text-sm hover:text-indigo-300">
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -159,19 +163,19 @@ function User() {
         </div>
       </div>
       <div className="chartProducts grid grid-cols-2 gap-4">
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
           <h2 className="text-lg font-medium pb-4 text-gray-100">
             User Growth
           </h2>
           <ChartUserGrowth />
         </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
           <h2 className="text-lg font-medium pb-4 text-gray-100">
             User Activity Heatmap
           </h2>
           <ChartUserActivityHeatmap />
         </div>
-        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid ">
+        <div className="lg:col-span-2 bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
           <h2 className=" text-lg font-medium pb-4 text-gray-100">
             User Demographics
           </h2>
