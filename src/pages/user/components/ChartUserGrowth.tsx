@@ -59,7 +59,7 @@ function ChartUserGrowth() {
               borderColor:"#5c6877",
               padding: "10px",
               opacity:"80%",
-            }}
+            }} 
             labelStyle={{
               color: "white", // رنگ سفید برای برچسب
             }}
