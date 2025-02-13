@@ -15,3 +15,14 @@ interface IAllUsersResponse {
   role: string;
   status: string;
 }
+interface IPanelAnalytic {
+  icon: ReactNode;
+  bgIcon:string;
+  title: string;
+  amount: number;
+  type: string;
+  icomMountLastPeriod: ReactNode;
+  lastPeriod: string;
+  amountLastPeriod: number;
+  typeLastPeriod: string;
+}
