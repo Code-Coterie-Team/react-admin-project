@@ -10,7 +10,6 @@ import {
 } from "recharts";
 function ChartSalesTrend() {
   const data = [
-
     { name: "Jan", sales: 4000 },
     { name: "Feb", sales: 3000 },
     { name: "Mar", sales: 5000 },
@@ -32,10 +31,10 @@ function ChartSalesTrend() {
           <Line
             type="monotone"
             dataKey="sales"
-            stroke="#8884d8" // رنگ خط
-            strokeWidth={3} // پهنای خط
+            stroke="#8884d8"
+            strokeWidth={3}
             activeDot={{ r: 8, fill: "#6366f1" }}
-            dot={{ r: 8, fill: "#6366f1" }} // دایره اصلی
+            dot={{ r: 8, fill: "#6366f1" }}
           />
           <CartesianGrid
             stroke="#e5e5e5"
@@ -44,26 +43,26 @@ function ChartSalesTrend() {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip
-               contentStyle={{
-                backgroundColor: "#333", // پس‌زمینه تیره
-                borderRadius: "5px",
-                borderColor:"#5c6877",
-                padding: "10px",
-                opacity:"80%",
-              }}
-              labelStyle={{
-                color: "white", // رنگ سفید برای برچسب
-              }}
-              itemStyle={{
-                color: "white", // رنگ سفید برای متن مقادیر
-              }}
+            contentStyle={{
+              backgroundColor: "#333",
+              borderRadius: "5px",
+              borderColor: "#5c6877",
+              padding: "10px",
+              opacity: "80%",
+            }}
+            labelStyle={{
+              color: "white",
+            }}
+            itemStyle={{
+              color: "white",
+            }}
           />
-            <Legend
+          <Legend
             verticalAlign="bottom"
             align="center"
             wrapperStyle={{
-              paddingTop: '10px',
-              paddingBottom: '10px',
+              paddingTop: "10px",
+              paddingBottom: "10px",
             }}
           />
         </LineChart>

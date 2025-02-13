@@ -1,4 +1,3 @@
-
 import {
   PieChart,
   Pie,
@@ -18,14 +17,12 @@ function ChartCategoryDistribution() {
     { name: "Home & Garden", value: 2800 },
   ];
 
-  // رنگ‌ها
   const COLORS = ["#8B5CF6", "#6366F1", "#F59E0B", "#10B981", "#EC4899"];
 
-  // تابع برای محاسبه درصد
-const renderLabel = (entry:any) => {
+  const renderLabel = (entry: any) => {
     const total = data.reduce((sum, item) => sum + item.value, 0);
-    const percentage = ((entry.value / total) * 100).toFixed(0); // محاسبه درصد
-    return `${entry.name}: ${percentage}%`; // فرمت برچسب
+    const percentage = ((entry.value / total) * 100).toFixed(0);
+    return `${entry.name}: ${percentage}%`;
   };
 
   return (
@@ -37,36 +34,36 @@ const renderLabel = (entry:any) => {
         <PieChart>
           <Pie
             data={data}
-            cx="50%" // مرکز x
-           label={renderLabel} // استفاده از تابع برای برچسب
-            labelLine={false} // حذف خطوط برچسب cy="50%" // مرکز y
-            innerRadius={0} // شعاع داخلی (0 برای توپر)
-            outerRadius={80} // شعاع خارجی
+            cx="50%"
+            label={renderLabel}
+            labelLine={false}
+            innerRadius={0}
+            outerRadius={80}
             fill="#8884d8"
-            paddingAngle={0} // فاصله بین بخش‌ها
+            paddingAngle={0}
             dataKey="value"
           >
             {data.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
-              /> // رنگ هر بخش
+              />
             ))}
           </Pie>
-          <Tooltip 
-               contentStyle={{
-                backgroundColor: "#333", // پس‌زمینه تیره
-                borderRadius: "5px",
-                borderColor:"#5c6877",
-                padding: "10px",
-                opacity:"80%",
-              }}
-              labelStyle={{
-                color: "white", // رنگ سفید برای برچسب
-              }}
-              itemStyle={{
-                color: "white", // رنگ سفید برای متن مقادیر
-              }}
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#333",
+              borderRadius: "5px",
+              borderColor: "#5c6877",
+              padding: "10px",
+              opacity: "80%",
+            }}
+            labelStyle={{
+              color: "white",
+            }}
+            itemStyle={{
+              color: "white",
+            }}
           />
           <Legend />
         </PieChart>

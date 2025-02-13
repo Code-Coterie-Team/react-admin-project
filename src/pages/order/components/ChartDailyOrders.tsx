@@ -7,7 +7,6 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  ReferenceLine,
 } from "recharts";
 
 function ChartDailyOrders() {
@@ -21,7 +20,6 @@ function ChartDailyOrders() {
     { name: "07/07", orders: 62 },
   ];
 
-
   return (
     <div className="chart-container h-80">
       <ResponsiveContainer
@@ -29,7 +27,6 @@ function ChartDailyOrders() {
         height="100%"
       >
         <LineChart
-        
           data={data}
           margin={{
             top: 10,
@@ -42,35 +39,34 @@ function ChartDailyOrders() {
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip
-             contentStyle={{
-              backgroundColor: "#333", // پس‌زمینه تیره
+            contentStyle={{
+              backgroundColor: "#333",
               borderRadius: "5px",
-              borderColor:"#5c6877",
+              borderColor: "#5c6877",
               padding: "10px",
-              opacity:"80%",
+              opacity: "80%",
             }}
             labelStyle={{
-              color: "white", // رنگ سفید برای برچسب
+              color: "white",
             }}
             itemStyle={{
-              color: "white", // رنگ سفید برای متن مقادیر
+              color: "white",
             }}
-        />
+          />
           <Legend
             verticalAlign="bottom"
             align="center"
             wrapperStyle={{
-              paddingTop: '10px',
-              paddingBottom: '10px',
+              paddingTop: "10px",
+              paddingBottom: "10px",
             }}
           />
           <Line
             connectNulls
             type="monotone"
             dataKey="orders"
-            stroke="#8884d8" // رنگ خط
-            strokeWidth={3} // پهنای خط
-           
+            stroke="#8884d8"
+            strokeWidth={3}
             fill="#fff"
           />
         </LineChart>
