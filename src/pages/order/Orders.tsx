@@ -18,7 +18,7 @@ function Orders() {
       nameChart: (<ChartDailyOrders />),
     },
     {
-      title: " Order Status Distribution",
+      title: "Order Status Distribution",
       nameChart: (<ChartOrderStatusDistribution />),
     },
   ]; 
