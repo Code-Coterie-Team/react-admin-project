@@ -15,11 +15,11 @@ function Orders() {
  const chartOrder = [
     {
       title: "Daily Orders",
-      nameChart: <ChartDailyOrders />,
+      nameChart: (<ChartDailyOrders />),
     },
     {
       title: " Order Status Distribution",
-      nameChart: <ChartOrderStatusDistribution />,
+      nameChart: (<ChartOrderStatusDistribution />),
     },
   ]; 
 
