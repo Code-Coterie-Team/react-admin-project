@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 interface IAllProductsResponse {
   id: string;
   image: string;
@@ -43,4 +44,13 @@ interface IChartFrameworksArray {
   charts: IChartFrameworks[];
 }
 
-
+interface IButtonSetting {
+  titelButton: string;
+}
+interface IItemNotifications {
+  title: string;
+  state: ReactNode;
+}
+interface IListNotifications {
+ itemNotification : IItemNotifications[];
+}

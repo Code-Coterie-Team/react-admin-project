@@ -1,3 +1,5 @@
+import { IPanelPages } from "../types/api";
+
 function Panel({ panels }: IPanelPages) {
   return (
     <div className="grid grid-cols-4 gap-3 pb-8">
