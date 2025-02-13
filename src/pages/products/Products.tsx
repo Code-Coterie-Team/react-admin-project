@@ -12,28 +12,12 @@ import {
 import ChartProductsSalesTrend from "./components/ChartProductsSalesTrend";
 import ChartProductsCategoryDistribution from "./components/ChartProductsCategoryDistribution";
 import { useGetAllProducts } from "../../api";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import ChartFramework from "../../components/ChartFramework";
 
 const Products = () => {
   const { data, isLoading, isError } = useGetAllProducts();
   const [searchProduct, setSearchProduct] = useState<string>("");
-  // const [filteredData, setFilteredData] = useState(data);
-  // useEffect(() => {
-  //   if (data) {
-  //     setFilteredData(data);
-  //   }
-  // }, [data]);
-
-  // useEffect(() => {
-  //   if (searchProduct == "") {
-  //     setFilteredData(data);
-  //   } else {
-  //     const results = data?.filter((item) =>
-  //       item.name.toLowerCase().includes(searchProduct.toLowerCase())
-  //     );
-  //     setFilteredData(results);
-  //   }
-  // }, [searchProduct]);
 
   if (isLoading) {
     return <div className="">Loading</div>;
@@ -42,59 +26,70 @@ const Products = () => {
   if (isError) {
     return <div className="">Error</div>;
   }
-
+  const ArrayPanelProducts = [
+    {
+      icon: (
+        <PackageBox06
+          className="text-indigo-600"
+          width="1.5rem"
+          height="1.5rem"
+        />
+      ),
+      title: "Total Products",
+      amount: 1234,
+      type: "",
+    },
+    {
+      icon: (
+        <LineChart
+          className="text-green-600"
+          width="1.5rem"
+          height="1.5rem"
+        />
+      ),
+      title: "Top Selling",
+      amount: 89,
+      type: "",
+    },
+    {
+      icon: (
+        <WarningError
+          className="text-yellow-500"
+          width="1.5rem"
+          height="1.5rem"
+        />
+      ),
+      title: "Low Stock",
+      amount: 23,
+      type: "",
+    },
+    {
+      icon: (
+        <Dollar
+          className="text-red-500"
+          width="1.5rem"
+          height="1.5rem"
+        />
+      ),
+      title: "Total Revenue",
+      amount: 543210,
+      type: "asset",
+    },
+  ];
+  const chartProducts = [
+    {
+      title: "Sales Trend",
+      nameChart: <ChartProductsSalesTrend />,
+    },
+    {
+      title: " Category Distribution",
+      nameChart: <ChartProductsCategoryDistribution />,
+    },
+  ];
   return (
     <div className="productPage main py-6 px-8">
-      <div className="grid grid-cols-4 gap-3 pb-8">
-        <Panel
-          icon={
-            <PackageBox06
-              className="text-indigo-600"
-              width="1.5rem"
-              height="1.5rem"
-            />
-          }
-          title="Total Products"
-          amount={1234}
-          type=""
-        />
-        <Panel
-          icon={
-            <LineChart
-              className="text-green-600"
-              width="1.5rem"
-              height="1.5rem"
-            />
-          }
-          title="Top Selling"
-          amount={89}
-          type=""
-        />
-        <Panel
-          icon={
-            <WarningError
-              className="text-yellow-500"
-              width="1.5rem"
-              height="1.5rem"
-            />
-          }
-          title="Low Stock"
-          amount={23}
-          type=""
-        />
-        <Panel
-          icon={
-            <Dollar
-              className="text-red-500"
-              width="1.5rem"
-              height="1.5rem"
-            />
-          }
-          title="Total Revenue"
-          amount={543210}
-          type="asset"
-        />
-      </div>
+      <Panel panels={ArrayPanelProducts} />
+
       <div className="productList mb-8 bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
         <div className="flex pb-7 justify-between items-center">
           <h2 className="text-xl text-gray-100 font-semibold">Product List</h2>
@@ -144,9 +139,10 @@ const Products = () => {
                   if (searchProduct === "") {
                     return item;
                   } else {
-                    return item.name.toLowerCase().includes(searchProduct.toLowerCase());
-                  } 
-                  // chage to  -- ? "":""
+                    return item.name
+                      .toLowerCase()
+                      .includes(searchProduct.toLowerCase());
+                  }
                 })
                 .map((product) => (
                   <tr key={product.id}>
@@ -191,20 +187,7 @@ const Products = () => {
           </table>
         </div>
       </div>
-      <div className="chartProducts grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
-          <h2 className="text-lg font-medium pb-4 text-gray-100">
-            Sales Trend
-          </h2>
-          <ChartProductsSalesTrend />
-        </div>
-        <div className="bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid ">
-          <h2 className="text-lg font-medium pb-4 text-gray-100">
-            Category Distribution
-          </h2>
-          <ChartProductsCategoryDistribution />
-        </div>
-      </div>
+      <ChartFramework charts={chartProducts} />
     </div>
   );
 };
