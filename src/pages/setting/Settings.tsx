@@ -42,7 +42,7 @@ function Settings() {
 
   return (
     <div className="setting py-6 px-8 max-w-4xl mx-auto">
-      <div className="profile flex flex-col mb-8 items-start space-y-4 bg-menuBody p-6 rounded-lg border-bmenuBody border-[1px] border-solid">
+      <div className="profile flex flex-col mb-8 items-start space-y-4 bg-menuBody p-6 rounded-lg border-bmenuBody border border-solid">
         <div className="flex flex-row gap-4">
           <User
             className="text-indigo-400"
@@ -64,11 +64,11 @@ function Settings() {
           </div>
         </div>
         <button className="bg-indigo-600 hover:bg-indigo-700 text-white rounded px-4 py-2 font-bold ">
-          Edit Profule
+          Edit Profile
         </button>
       </div>
 
-      <div className="notifications mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border-[1px] border-solid">
+      <div className="notifications mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border border-solid">
         <div className="flex flex-row gap-4 mb-4">
           <Notification03
             className="text-indigo-400"
@@ -134,7 +134,7 @@ function Settings() {
           </div>
         </div>
       </div>
-      <div className="security mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border-[1px] border-solid">
+      <div className="security mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border border-solid">
         <div className="flex flex-row gap-4 mb-4">
           <Lock01
             className="text-indigo-400"
@@ -173,7 +173,7 @@ function Settings() {
         </div>
       </div>
 
-      <div className="connectedAccounts mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border-[1px] border-solid">
+      <div className="connectedAccounts mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border border-solid">
         <div className="flex flex-row gap-4 mb-4">
           <Help
             className="text-indigo-400"
@@ -253,7 +253,6 @@ function Settings() {
 
         <button className="flex gap-2 items-center text-indigo-400 hover:text-indigo-300">
           <Plus
-         
             width="1.25rem"
             height="1.25rem"
           />
@@ -261,7 +260,7 @@ function Settings() {
         </button>
       </div>
 
-      <div className="dangerZone mb-8 bg-red-900 bg-opacity-50 p-6 rounded-lg border-red-700 border-[1px] border-solid">
+      <div className="dangerZone mb-8 bg-red-900 bg-opacity-50 p-6 rounded-lg border-red-700 border border-solid">
         <div className="flex flex-row gap-4 mb-4">
           <Trash
             className="text-red-400"
@@ -276,7 +275,7 @@ function Settings() {
           Permanently delete your account and all of your content.
         </p>
         <button className="py-2 px-4 rounded bg-red-600 hover:bg-red-700 text-white font-bold ">
-        Delete Account
+          Delete Account
         </button>
       </div>
     </div>
