@@ -1,19 +1,6 @@
-import { ReactNode } from "react";
-
-interface IPanelAnalytic {
-  icon: ReactNode;
-  bgIcon: "green" | "red";
-  title: string;
-  amount: number;
-  type: "persent" | "aset" | "";
-  icomMountLastPeriod: ReactNode;
-  lastPeriod: string;
-  amountLastPeriod: number;
-  typeLastPeriod: "up" | "down";
-}
 function PanelAnalytics(props: IPanelAnalytic) {
   return (
-    <div className=" bg-menuBody p-5 rounded-lg border-bmenuBody border-[1px] border-solid hover:shadow-itemMenuOverview hover:translate-y-[-5px]">
+    <div className=" bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid hover:shadow-itemMenuOverview hover:translate-y-[-5px]">
       <div className="headerPanelAnalytics flex justify-between">
         <div className="title flex flex-col">
           <h3 className="text-sm font-medium text-gray-400">{props.title}</h3>
