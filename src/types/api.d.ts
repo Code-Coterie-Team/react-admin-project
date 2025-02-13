@@ -26,3 +26,9 @@ interface IPanelAnalytic {
   amountLastPeriod: number;
   typeLastPeriod: string;
 }
+interface IPanelProps {
+  icon: ReactNode;
+  title: string;
+  amount: number;
+  type: "persent" | "asset" | "";
+}
