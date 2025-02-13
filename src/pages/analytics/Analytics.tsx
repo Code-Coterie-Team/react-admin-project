@@ -201,12 +201,8 @@ function Analytics() {
         </div>
         <ChartRevenueVsTarget />
       </div>
-      <div className="chartAnalytics grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
-        {chartAnalytics.map((item) => (
-          <ChartFramework title={item.title} nameChart={item.nameChart}/>
-        ))}
-      </div>
 
+      <ChartFramework charts={chartAnalytics} />
       <div className="aIPoweredInsights bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid mb-8">
         <h2 className="pb-4 text-xl font-semibold text-gray-100">
           AI-Powered Insights
