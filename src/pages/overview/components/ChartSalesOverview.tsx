@@ -49,9 +49,7 @@ function ChartSalesOverview() {
           <XAxis dataKey="name"
 
           />
-          <YAxis
-      
-          />
+          <YAxis/>
           <Tooltip 
                contentStyle={{
                 backgroundColor: "#333", // پس‌زمینه تیره

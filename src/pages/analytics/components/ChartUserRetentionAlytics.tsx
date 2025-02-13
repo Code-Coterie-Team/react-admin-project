@@ -10,7 +10,6 @@ import {
   ReferenceLine,
 } from "recharts";
 function ChartUserRetention() {
-
   const data = [
     { name: "Week 1", retention: 100 },
     { name: "Week 2", retention: 75 },
@@ -21,8 +20,8 @@ function ChartUserRetention() {
     { name: "Week 7", retention: null },
     { name: "Week 8", retention: 35 },
   ];
-// تابع سفارشی برای نمایش نام‌ها در محور X
-  const renderXAxisTick = (props: { x: any; y: any; payload: any; }) => {
+  // تابع سفارشی برای نمایش نام‌ها در محور X
+  const renderXAxisTick = (props: { x: any; y: any; payload: any }) => {
     const { x, y, payload } = props;
     return (
       <g transform={`translate(${x},${y})`}>
@@ -33,20 +32,20 @@ function ChartUserRetention() {
           textAnchor="middle"
           fill="#666"
         >
-          {payload.value === "Week 7" ? "" : payload.value} {/* مخفی کردن Week 7 */}
+          {payload.value === "Week 7" ? "" : payload.value}{" "}
+          {/* مخفی کردن Week 7 */}
         </text>
       </g>
     );
   };
-  
+
   return (
     <div className="chart-container h-80">
-       <ResponsiveContainer
+      <ResponsiveContainer
         width="100%"
         height="100%"
       >
         <LineChart
-        
           data={data}
           margin={{
             top: 10,
@@ -56,44 +55,46 @@ function ChartUserRetention() {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" tick={renderXAxisTick} /> {/* استفاده از تابع سفارشی */}
+          <XAxis
+            dataKey="name"
+            tick={renderXAxisTick}
+          />
           <YAxis />
           <Tooltip
-             contentStyle={{
-              backgroundColor: "#333", // پس‌زمینه تیره
+            contentStyle={{
+              backgroundColor: "#333",
               borderRadius: "5px",
-              borderColor:"#5c6877",
+              borderColor: "#5c6877",
               padding: "10px",
-              opacity:"80%",
+              opacity: "80%",
             }}
             labelStyle={{
-              color: "white", // رنگ سفید برای برچسب
+              color: "white",
             }}
             itemStyle={{
-              color: "white", // رنگ سفید برای متن مقادیر
+              color: "white",
             }}
-        />
+          />
           <Legend
             verticalAlign="bottom"
             align="center"
             wrapperStyle={{
-              paddingTop: '10px',
-              paddingBottom: '10px',
+              paddingTop: "10px",
+              paddingBottom: "10px",
             }}
           />
           <Line
             connectNulls
             type="monotone"
             dataKey="retention"
-            stroke="#8884d8" // رنگ خط
-            strokeWidth={3} // پهنای خط
-           
+            stroke="#8884d8"
+            strokeWidth={3}
             fill="#fff"
           />
         </LineChart>
       </ResponsiveContainer>
     </div>
-  )
+  );
 }
 
-export default ChartUserRetention
+export default ChartUserRetention;
