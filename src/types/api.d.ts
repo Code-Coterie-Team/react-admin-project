@@ -26,13 +26,21 @@ interface IPanelAnalytic {
   amountLastPeriod: number;
   typeLastPeriod: string;
 }
-interface IPanelProps {
+interface IPanels {
   icon: ReactNode;
   title: string;
   amount: number;
-  type: "persent" | "asset" | "";
+  type: string;
 }
-interface ChartFrameworks {
+interface IPanelPages {
+  panels: IPanels[];
+}
+interface IChartFrameworks {
   title: string;
   nameChart: ReactNode;
 }
+interface IChartFrameworksArray {
+  charts: IChartFrameworks[];
+}
+
+
