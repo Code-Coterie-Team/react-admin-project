@@ -1,4 +1,3 @@
-import React from "react";
 import { IButtonSetting } from "../types/api";
 
 function ButtonSetting(props: IButtonSetting) {
