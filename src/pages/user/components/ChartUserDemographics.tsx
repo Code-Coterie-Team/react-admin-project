@@ -1,7 +1,13 @@
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer, Cell } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Legend,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
 
 function ChartUserDemographics() {
-  
   const data = [
     { name: "18-24", value: 20 },
     { name: "25-34", value: 30 },
@@ -10,11 +16,13 @@ function ChartUserDemographics() {
     { name: "55+", value: 10 },
   ];
 
-
   const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE"];
-  // تابع سفارشی برای نمایش متن کنار هر بخش
-  const renderLabel = (entry) => {
-    const percentage = ((entry.value / data.reduce((total, current) => total + current.value, 0)) * 100).toFixed(1);
+  const renderLabel = (entry: any) => {
+    const percentage = (
+      (entry.value /
+        data.reduce((total, current) => total + current.value, 0)) *
+      100
+    ).toFixed(1);
     return `${entry.name} ${percentage}%`;
   };
   return (
@@ -27,40 +35,43 @@ function ChartUserDemographics() {
           width={400}
           height={400}
         >
-            <Pie
+          <Pie
             dataKey="value"
             isAnimationActive={false}
             data={data}
             cx="50%"
             cy="50%"
             outerRadius={80}
-            label={renderLabel}  // استفاده از تابع سفارشی برای نمایش متن
+            label={renderLabel}
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              <Cell
+                key={`cell-${index}`}
+                fill={COLORS[index % COLORS.length]}
+              />
             ))}
           </Pie>
-       
+
           <Tooltip
-               contentStyle={{
-                backgroundColor: "#333", // پس‌زمینه تیره
-                borderRadius: "5px",
-                borderColor:"#5c6877",
-                padding: "10px",
-                opacity:"80%",
-              }}
-              labelStyle={{
-                color: "white", // رنگ سفید برای برچسب
-              }}
-              itemStyle={{
-                color: "white", // رنگ سفید برای متن مقادیر
-              }}
+            contentStyle={{
+              backgroundColor: "#333",
+              borderRadius: "5px",
+              borderColor: "#5c6877",
+              padding: "10px",
+              opacity: "80%",
+            }}
+            labelStyle={{
+              color: "white",
+            }}
+            itemStyle={{
+              color: "white",
+            }}
           />
           <Legend
-            layout="horizontal"         // برای نمایش افقی
-            verticalAlign="bottom"       // برای قرار دادن در پایین
-            align="center"               // برای وسط چین کردن
-            wrapperStyle={{ paddingTop: 20 }} // کمی فاصله از نمودار
+            layout="horizontal"
+            verticalAlign="bottom"
+            align="center"
+            wrapperStyle={{ paddingTop: 20 }}
           />
         </PieChart>
       </ResponsiveContainer>

@@ -31,40 +31,32 @@ function ChartUserGrowth() {
           <Line
             type="monotone"
             dataKey="sales"
-            // stroke="#d1d5db" // رنگ خط نمودار (خاکی روشن)
-            stroke="#8884d8" // رنگ خط
-            strokeWidth={3} // پهنای خط
+            stroke="#8884d8"
+            strokeWidth={3}
             activeDot={{ r: 8, fill: "#6366f1" }}
-            dot={{ r: 8, fill: "#6366f1" }} // دایره اصلی
-            strokeDasharray="0 0" // سبک خط تیره
+            dot={{ r: 8, fill: "#6366f1" }}
+            strokeDasharray="0 0"
           />
           <CartesianGrid
             stroke="#e5e5e5"
             strokeDasharray="5 5"
           />
-          <XAxis
-            dataKey="name"
-            // stroke="#000000" // رنگ مشکی برای محور x
-            // tick={{ stroke: "#000000" }} // رنگ مشکی برای تیک‌ها
-          />
+          <XAxis dataKey="name" />
 
-          <YAxis
-          // stroke="#000000" // رنگ مشکی برای محور y
-          // tick={{ stroke: "#000000" }} // رنگ مشکی برای تیک‌ها
-          />
-          <Tooltip 
-             contentStyle={{
-              backgroundColor: "#333", // پس‌زمینه تیره
+          <YAxis />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#333",
               borderRadius: "5px",
-              borderColor:"#5c6877",
+              borderColor: "#5c6877",
               padding: "10px",
-              opacity:"80%",
-            }} 
+              opacity: "80%",
+            }}
             labelStyle={{
-              color: "white", // رنگ سفید برای برچسب
+              color: "white",
             }}
             itemStyle={{
-              color: "white", // رنگ سفید برای متن مقادیر
+              color: "white",
             }}
           />
         </LineChart>
