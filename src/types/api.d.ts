@@ -52,5 +52,23 @@ interface IItemNotifications {
   state: ReactNode;
 }
 interface IListNotifications {
- itemNotification : IItemNotifications[];
+  itemNotification: IItemNotifications[];
+}
+
+interface InitialState {
+  initialState: boolean;
+}
+interface ItemConnectAccounts {
+  srcimg: string;
+  altimg: string;
+  titleAccount: string;
+  initialState: boolean;
+}
+interface IListConnectAccounts {
+  itemAccount: ItemConnectAccounts[];
+}
+
+interface ITitlePart {
+  iconTitlePart: ReactNode;
+  titlePart: string;
 }
