@@ -20,7 +20,7 @@ function Notifications() {
   ];
   return (
     <div className="notifications mb-8 bg-menuBody p-6 rounded-lg border-bmenuBody border border-solid">
-      <ItemConnectAccount
+      <TitlePart
         iconTitlePart={
           <Notification03
             className="text-indigo-400"
