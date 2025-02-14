@@ -1,4 +1,3 @@
-// import React from 'react'
 import {
   ArrowDown,
   ArrowUp,
@@ -8,13 +7,13 @@ import {
   ShoppingBag,
   Users,
 } from "../../icons";
-import ChartChannelPerformance from "./components/ChartChannelPerformanceanAlytics";
 import ChartProductPerformance from "./components/ChartProductPerformanceAlytics";
 import ChartCustomerSegmentation from "./components/ChartCustomerSegmentationAlytics";
-import ChartRevenueVsTarget from "./components/ChartRevenueVsTargetAlytics";
-import ChartUserRetention from "./components/ChartUserRetentionAlytics";
 import PanelAnalytics from "../../components/PanelAnalytics";
 import ChartFramework from "../../components/ChartFramework";
+import PieCharts from "../../components/PieCharts";
+import LineCharts from "../../components/LineCharts";
+import AreaCharts from "../../components/AreaCharts";
 
 function Analytics() {
   const itemPanel = [
@@ -112,9 +111,48 @@ function Analytics() {
     },
   ];
   const chartAnalytics = [
-    { title: "Channel Performance", nameChart: <ChartChannelPerformance /> },
+    {
+      title: "Channel Performance",
+      nameChart: (
+        <PieCharts
+          dataPieChart={[
+            { name: "Organic Search", value: 4000 },
+            { name: "Paid Search", value: 3000 },
+            { name: "Direct", value: 2000 },
+            { name: "Social Media", value: 2780 },
+            { name: "Referral", value: 1890 },
+            { name: "Email ", value: 2390 },
+          ]}
+          colorPieChart={[
+            "#8884d8",
+            "#82ca9d",
+            "#ffc658",
+            "#ff8042",
+            "#0088FE",
+            "#00C49F",
+          ]}
+        />
+      ),
+    },
     { title: " Product Performance", nameChart: <ChartProductPerformance /> },
-    { title: "User Retention", nameChart: <ChartUserRetention /> },
+    {
+      title: "User Retention",
+      nameChart: (
+        <LineCharts
+          dataLineChart={[
+            { name: "Week 1", value: 100 },
+            { name: "Week 2", value: 75 },
+            { name: "Week 3", value: 60 },
+            { name: "Week 4", value: 50 },
+            { name: "Week 5", value: 45 },
+            { name: "Week 6", value: 40 },
+            { name: "Week 7", value: 37 },
+            { name: "Week 8", value: 35 },
+          ]}
+          legendName={"retention"}
+        />
+      ),
+    },
     {
       title: "Customer Segmentation",
       nameChart: <ChartCustomerSegmentation />,
@@ -170,7 +208,8 @@ function Analytics() {
     <div className="analyticsPage main py-6 px-8">
       <div className="grid grid-cols-4 gap-3 pb-8">
         {itemPanel.map((item, index) => (
-          <PanelAnalytics key={index}
+          <PanelAnalytics
+            key={index}
             icon={item.icon}
             bgIcon={item.bgIcon}
             title={item.title}
@@ -199,7 +238,19 @@ function Analytics() {
             <option>This Year</option>
           </select>
         </div>
-        <ChartRevenueVsTarget />
+        <AreaCharts
+          dataListAreaCharts={[
+            { name: "Jan", value: 4000, valuetow: 3800 },
+            { name: "Feb", value: 3000, valuetow: 3200 },
+            { name: "Mar", value: 5000, valuetow: 4500 },
+            { name: "Apr", value: 4500, valuetow: 4200 },
+            { name: "May", value: 6000, valuetow: 5500 },
+            { name: "Jun", value: 5500, valuetow: 5800 },
+            { name: "Jul", value: 7000, valuetow: 6500 },
+          ]}
+          legendValue={"revenue"}
+          legendValuetow={"target"}
+        />
       </div>
 
       <ChartFramework charts={chartAnalytics} />
@@ -208,7 +259,10 @@ function Analytics() {
           AI-Powered Insights
         </h2>
         {itemPoweredInsights.map((item, index) => (
-          <div key={index} className="flex items-center">
+          <div
+            key={index}
+            className="flex items-center"
+          >
             <div className="p-2">{item.iconName}</div>
 
             <p className="text-gray-300 pl-3 text-base">{item.description}</p>
