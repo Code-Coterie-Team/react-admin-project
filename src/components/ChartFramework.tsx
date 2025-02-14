@@ -1,3 +1,5 @@
+import { IChartFrameworksArray } from "../types/api";
+
 function ChartFramework({ charts }: IChartFrameworksArray) {
   return (
     <div className="mb-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
