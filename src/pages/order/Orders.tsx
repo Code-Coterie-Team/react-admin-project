@@ -7,21 +7,44 @@ import {
   Search02,
 } from "../../icons";
 import Panel from "../../components/Panel";
-import ChartOrderStatusDistribution from "./components/ChartOrderStatusDistribution";
-import ChartDailyOrders from "./components/ChartDailyOrders";
 import ChartFramework from "../../components/ChartFramework";
+import PieCharts from "../../components/PieCharts";
+import LineCharts from "../../components/LineCharts";
 
 function Orders() {
- const chartOrder = [
+  const chartOrder = [
     {
       title: "Daily Orders",
-      nameChart: (<ChartDailyOrders />),
+      nameChart: (
+        <LineCharts
+          dataLineChart={[
+            { name: "07/01", value: 45 },
+            { name: "07/02", value: 52 },
+            { name: "07/03", value: 49 },
+            { name: "07/04", value: 60 },
+            { name: "07/05", value: 55 },
+            { name: "07/06", value: 58 },
+            { name: "07/07", value: 62 },
+          ]}
+          legendName={"orders"}
+        />
+      ),
     },
     {
       title: "Order Status Distribution",
-      nameChart: (<ChartOrderStatusDistribution />),
+      nameChart: (
+        <PieCharts
+          dataPieChart={[
+            { name: "Pending", value: 30 },
+            { name: "Processing ", value: 45 },
+            { name: "Shipped", value: 60 },
+            { name: "Delivered", value: 120 },
+          ]}
+          colorPieChart={["#FF6B6B", "#4ECDC4", "#45B7D1", "#FED766"]}
+        />
+      ),
     },
-  ]; 
+  ];
 
   const ArrayPanelOrders = [
     {
