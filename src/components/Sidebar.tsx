@@ -111,8 +111,8 @@ const Sidbar = () => {
       </button>
 
       <nav className="pt-8 flex flex-col">
-        {ItemMenuBar.map((item) => (
-          <Link to={item.to}>
+        {ItemMenuBar.map((item,index) => (
+          <Link key={index} to={item.to}>
             <div className="overView flex p-4 mb-2 hover:bg-bgHover rounded-lg">
               <div>{item.icon}</div>
               {menuBar || (

@@ -169,8 +169,8 @@ function Analytics() {
   return (
     <div className="analyticsPage main py-6 px-8">
       <div className="grid grid-cols-4 gap-3 pb-8">
-        {itemPanel.map((item) => (
-          <PanelAnalytics
+        {itemPanel.map((item, index) => (
+          <PanelAnalytics key={index}
             icon={item.icon}
             bgIcon={item.bgIcon}
             title={item.title}
@@ -207,8 +207,8 @@ function Analytics() {
         <h2 className="pb-4 text-xl font-semibold text-gray-100">
           AI-Powered Insights
         </h2>
-        {itemPoweredInsights.map((item) => (
-          <div className="flex items-center">
+        {itemPoweredInsights.map((item, index) => (
+          <div key={index} className="flex items-center">
             <div className="p-2">{item.iconName}</div>
 
             <p className="text-gray-300 pl-3 text-base">{item.description}</p>

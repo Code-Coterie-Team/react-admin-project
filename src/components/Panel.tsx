@@ -3,8 +3,8 @@ import { IPanelPages } from "../types/api";
 function Panel({ panels }: IPanelPages) {
   return (
     <div className="grid grid-cols-4 gap-3 pb-8">
-      {panels.map((item) => (
-        <div
+      {panels.map((item , index) => (
+        <div key={index}
           className="totalSales bg-menuBody p-5 rounded-lg border-bmenuBody border 
 border-solid hover:shadow-itemMenuOverview hover:-translate-y-1"
         >
