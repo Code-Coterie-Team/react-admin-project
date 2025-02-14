@@ -9,8 +9,9 @@
   }
 }
 tr:not(:last-child) {
-    @apply tableBorderB;
+  @apply tableBorderB;
 }
 body {
   font-size: 14px;
+  overflow: hidden;
 }
