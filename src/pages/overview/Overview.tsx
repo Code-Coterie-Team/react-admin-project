@@ -1,9 +1,9 @@
 import Panel from "../../components/Panel";
 import { Flash, Users, ShoppingBag, BarChart01 } from "../../icons";
-import ChartSalesOverview from "./components/ChartSalesOverview";
-import ChartCategoryDistribution from "./components/ChartCategoryDistributionOverview";
 import ChartSalesByChannel from "./components/ChartSalesByChannelOverview";
 import ChartFramework from "../../components/ChartFramework";
+import PieCharts from "../../components/PieCharts";
+import LineCharts from "../../components/LineCharts";
 
 function Overview() {
   const panelOverview = [
@@ -59,11 +59,46 @@ function Overview() {
   const chartOverview = [
     {
       title: "Sales Overview",
-      nameChart: <ChartSalesOverview />,
+      nameChart: (
+        <LineCharts
+          dataLineChart={[
+            { name: "Jul", value: 4200 },
+            { name: "Aug", value: 3800 },
+            { name: "Sep", value: 5100 },
+            { name: "Oct", value: 4600 },
+            { name: "Nov", value: 5400 },
+            { name: "Dec", value: 7200 },
+            { name: "Jan", value: 6100 },
+            { name: "Feb", value: 5900 },
+            { name: "Mar", value: 6800 },
+            { name: "Apr", value: 6300 },
+            { name: "May", value: 7100 },
+            { name: "Jun", value: 7500 },
+          ]}
+          legendName={""}
+        />
+      ),
     },
     {
       title: " Category Distribution",
-      nameChart: <ChartCategoryDistribution />,
+      nameChart: (
+        <PieCharts
+          dataPieChart={[
+            { name: "Clothing", value: 3200 },
+            { name: "Electronics", value: 4500 },
+            { name: "Sports & Outdoors", value: 1900 },
+            { name: "Books", value: 2100 },
+            { name: "Home & Garden", value: 2800 },
+          ]}
+          colorPieChart={[
+            "#8B5CF6",
+            "#6366F1",
+            "#F59E0B",
+            "#10B981",
+            "#EC4899",
+          ]}
+        />
+      ),
     },
   ];
   return (
