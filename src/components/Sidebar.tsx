@@ -97,8 +97,8 @@ const Sidbar = () => {
 
   return (
     <div
-      className={`sidbar p-4 border-r-[1px] border-solid border-grayb h-full w-full transition-all duration-300
-     ${menuBar ? "col-span-1 w-[80px]" : "col-span-2"}
+      className={`sidbar p-4 border-r-[1px] border-solid border-grayb transition-all duration-1000
+     ${menuBar ? "w-[80px]" : "w-[256px]"}
      `}
     >
       <button
@@ -111,13 +111,20 @@ const Sidbar = () => {
       </button>
 
       <nav className="pt-8 flex flex-col">
-        {ItemMenuBar.map((item,index) => (
-          <Link key={index} to={item.to}>
-            <div className="overView flex p-4 mb-2 hover:bg-bgHover rounded-lg">
+        {ItemMenuBar.map((item, index) => (
+          <Link
+            key={index}
+            to={item.to}
+          >
+            <div className="flex p-4 mb-2 hover:bg-bgHover rounded-lg">
               <div>{item.icon}</div>
-              {menuBar || (
-                <span className="pl-3 font-medium">{item.title}</span>
-              )}
+              <span
+                className={`${
+                  menuBar ? "opacity-0 " : "opacity-100 "
+                } pl-3 font-medium transition-opacity duration-1000`}
+              >
+                {item.title}
+              </span>
             </div>
           </Link>
         ))}
