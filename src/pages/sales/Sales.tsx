@@ -2,10 +2,10 @@
 
 import { Dollar, Cart, LineChart, Layout06 } from "../../icons";
 import ChartDailySalesTrend from "./components/ChartDailySalesTrend";
-import ChartSalesByCategory from "./components/ChartSalesByCategory";
-import ChartSalesOverview from "./components/ChartSalesOverview";
 import Panel from "../../components/Panel";
 import ChartFramework from "../../components/ChartFramework";
+import PieCharts from "../../components/PieCharts";
+import AreaCharts from "../../components/AreaCharts";
 
 function Sales() {
   const panelSales = [
@@ -61,13 +61,30 @@ function Sales() {
   const chartSales = [
     {
       title: "Sales by Category",
-      nameChart: ( <ChartSalesByCategory />),
+      nameChart: (
+        <PieCharts
+          dataPieChart={[
+            { name: "Electronics", value: 400 },
+            { name: "Clothing", value: 300 },
+            { name: "Home & Garden", value: 200 },
+            { name: "Books", value: 100 },
+            { name: "Others", value: 150 },
+          ]}
+          colorPieChart={[
+            "#8884d8",
+            "#82ca9d",
+            "#ffc658",
+            "#ff8042",
+            "#0088FE",
+          ]}
+        />
+      ),
     },
     {
       title: "Daily Sales Trend",
-      nameChart: (  <ChartDailySalesTrend />),
+      nameChart: <ChartDailySalesTrend />,
     },
-  ]; 
+  ];
   return (
     <div className="overviewPage main py-6 px-8">
       <Panel panels={panelSales} />
@@ -88,7 +105,20 @@ function Sales() {
               <option>This Year</option>
             </select>
           </div>
-          <ChartSalesOverview />
+          <AreaCharts
+            dataListAreaCharts={[
+              { name: "Jan", value: 4000, valuetow: 0 },
+              { name: "Feb", value: 3000, valuetow: 0 },
+              { name: "Mar", value: 5000, valuetow: 0 },
+
+              { name: "Apr", value: 4500, valuetow: 0 },
+              { name: "May", value: 6000, valuetow: 0 },
+              { name: "Jun", value: 5500, valuetow: 0 },
+              { name: "Jul", value: 7000, valuetow: 0 },
+            ]}
+            legendValue={"sales"}
+            legendValuetow={""}
+          />
         </div>
         <ChartFramework charts={chartSales} />
       </div>
