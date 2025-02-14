@@ -1,3 +1,4 @@
+import { string } from "prop-types";
 import { ReactNode } from "react";
 interface IAllProductsResponse {
   id: string;
@@ -71,4 +72,33 @@ interface IListConnectAccounts {
 interface ITitlePart {
   iconTitlePart: ReactNode;
   titlePart: string;
+}
+
+interface IDataPieCharts {
+  name: string;
+  value: number;
+}
+interface IListDataPieChart {
+  dataPieChart: IDataPieCharts[];
+  colorPieChart: string[];
+}
+
+interface IDataLineChart {
+  name: string;
+  value: number;
+}
+interface IListDataLineChart {
+  dataLineChart: IDataLineChart[];
+  legendName: string;
+}
+
+interface IDataListAreaChart {
+  name: string;
+  value: number;
+  valuetow: number;
+}
+interface IListAreaChart {
+  dataListAreaCharts: IDataListAreaChart[];
+  legendValue: string;
+  legendValuetow: string;
 }
