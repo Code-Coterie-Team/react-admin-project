@@ -9,11 +9,11 @@ import {
   WarningError,
   Dollar,
 } from "../../icons";
-import ChartProductsSalesTrend from "./components/ChartProductsSalesTrend";
-import ChartProductsCategoryDistribution from "./components/ChartProductsCategoryDistribution";
 import { useGetAllProducts } from "../../api";
 import { useState } from "react";
 import ChartFramework from "../../components/ChartFramework";
+import PieCharts from "../../components/PieCharts";
+import LineCharts from "../../components/LineCharts";
 
 const Products = () => {
   const { data, isLoading, isError } = useGetAllProducts();
@@ -79,11 +79,40 @@ const Products = () => {
   const chartProducts = [
     {
       title: "Sales Trend",
-      nameChart: <ChartProductsSalesTrend />,
+      nameChart: (
+        <LineCharts
+          dataLineChart={[
+            { name: "Jan", value: 4000 },
+            { name: "Feb", value: 3000 },
+            { name: "Mar", value: 5000 },
+            { name: "Apr", value: 4500 },
+            { name: "May", value: 6000 },
+            { name: "Jun", value: 5500 },
+          ]}
+          legendName={"sale"}
+        />
+      ),
     },
     {
       title: " Category Distribution",
-      nameChart: <ChartProductsCategoryDistribution />,
+      nameChart: (
+        <PieCharts
+          dataPieChart={[
+            { name: "Clothing", value: 3200 },
+            { name: "Electronics", value: 4500 },
+            { name: "Sports & Outdoors", value: 1900 },
+            { name: "Books", value: 2100 },
+            { name: "Home & Garden", value: 2800 },
+          ]}
+          colorPieChart={[
+            "#8B5CF6",
+            "#6366F1",
+            "#F59E0B",
+            "#10B981",
+            "#EC4899",
+          ]}
+        />
+      ),
     },
   ];
   return (
