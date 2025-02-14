@@ -6,12 +6,12 @@ import {
   CheckMarkCircle,
   Search02,
 } from "../../icons";
-import ChartUserGrowth from "./components/ChartUserGrowth";
 import ChartUserActivityHeatmap from "./components/ChartUserActivityHeatmap";
-import ChartUserDemographics from "./components/ChartUserDemographics";
 import { useGetAllUsers } from "../../api";
 import { useEffect, useState } from "react";
 import ChartFramework from "../../components/ChartFramework";
+import PieCharts from "../../components/PieCharts";
+import LineCharts from "../../components/LineCharts";
 function User() {
   const { data } = useGetAllUsers();
   const [searchUsers, setSearchUsers] = useState<string>("");
@@ -87,7 +87,19 @@ function User() {
   const chartUsers = [
     {
       title: "User Growth",
-      nameChart: <ChartUserGrowth />,
+      nameChart: (
+        <LineCharts
+          dataLineChart={[
+            { name: "Jan", value: 1000 },
+            { name: "Feb", value: 1500 },
+            { name: "Mar", value: 2000 },
+            { name: "Apr", value: 3000 },
+            { name: "May", value: 4000 },
+            { name: "Jun", value: 5000 },
+          ]}
+          legendName={""}
+        />
+      ),
     },
     {
       title: "User Activity Heatmap",
@@ -185,7 +197,22 @@ function User() {
           <h2 className=" text-lg font-medium pb-4 text-gray-100">
             User Demographics
           </h2>
-          <ChartUserDemographics />
+          <PieCharts
+            dataPieChart={[
+              { name: "18-24", value: 20 },
+              { name: "25-34", value: 30 },
+              { name: "35-44", value: 25 },
+              { name: "45-54", value: 15 },
+              { name: "55+", value: 10 },
+            ]}
+            colorPieChart={[
+              "#8884d8",
+              "#82ca9d",
+              "#ffc658",
+              "#ff8042",
+              "#0088FE",
+            ]}
+          />
         </div>
       </div>
     </div>
