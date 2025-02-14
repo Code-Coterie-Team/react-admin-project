@@ -1,3 +1,5 @@
+import { IPanelAnalytic } from "../types/api";
+
 function PanelAnalytics(props: IPanelAnalytic) {
   return (
     <div className=" bg-menuBody p-5 rounded-lg border-bmenuBody border border-solid hover:shadow-itemMenuOverview hover:translate-y-[-5px]">
