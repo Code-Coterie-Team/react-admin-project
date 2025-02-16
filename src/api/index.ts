@@ -1,4 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
+import {IAllProductsResponse, IAllUsersResponse} from "../types/api"
+
 import axios from 'axios';
 const urlProducts =
   "https://676ec0e7df5d7dac1ccb9be4.mockapi.io/api/products/products/";
