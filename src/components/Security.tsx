@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Lock01 } from "../icons";
 import ButtonSetting from "./ButtonSetting";
 import ToggleButton from "./ToggleButton";

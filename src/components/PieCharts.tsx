@@ -37,7 +37,7 @@ function PieCharts({ dataPieChart, colorPieChart }: IListDataPieChart) {
             outerRadius={80}
             label={renderLabel}
           >
-            {dataPieChart.map((entry, index) => (
+            {dataPieChart.map((_, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={colorPieChart[index % colorPieChart.length]}

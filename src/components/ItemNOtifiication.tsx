@@ -1,4 +1,3 @@
-import React from 'react'
 import { IListNotifications } from '../types/api'
 
 function ItemNOtifiication({itemNotification} : IListNotifications) {

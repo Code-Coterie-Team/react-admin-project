@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { InitialState } from "../types/api";
 
 function ToggleButton({ initialState }: InitialState) {
