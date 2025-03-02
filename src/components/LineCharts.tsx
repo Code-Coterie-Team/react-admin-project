@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-import { IListDataLineChart } from "../types/api";
+import { IListDataLineChart } from "../types/types";
 function LineCharts({ dataLineChart, legendName }: IListDataLineChart) {
   return (
     <div className="chart-container h-80">

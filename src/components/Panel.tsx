@@ -1,4 +1,4 @@
-import { IPanelPages } from "../types/api";
+import { IPanelPages } from "../types/types";
 
 function Panel({ panels }: IPanelPages) {
   return (

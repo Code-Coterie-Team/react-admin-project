@@ -1,11 +1,14 @@
 import ButtonConnect from "./ButtonConnect";
-import { IListConnectAccounts } from "../types/api";
+import { IListConnectAccounts } from "../types/types";
 
 function ItemConnectAccount({ itemAccount }: IListConnectAccounts) {
   return (
     <>
-      {itemAccount.map((item,index) => (
-        <div key={index} className="flex flex-row justify-between py-3">
+      {itemAccount.map((item, index) => (
+        <div
+          key={index}
+          className="flex flex-row justify-between py-3"
+        >
           <div className="flex flex-row gap-2">
             <img
               className="size-6"

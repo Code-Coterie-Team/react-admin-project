@@ -9,7 +9,7 @@ import {
   Legend,
   LegendType,
 } from "recharts";
-import { IListAreaChart } from "../types/api";
+import { IListAreaChart } from "../types/types";
 
 function AreaCharts({
   dataListAreaCharts,

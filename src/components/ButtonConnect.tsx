@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { InitialState } from "../types/api";
+import { InitialState } from "../types/types";
 
 function ButtonConnect({ initialState }: InitialState) {
   const [connectAccounts, setConnectAccounts] = useState(initialState);

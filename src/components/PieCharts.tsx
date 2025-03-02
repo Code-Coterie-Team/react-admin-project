@@ -6,7 +6,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
-import { IListDataPieChart } from "../types/api";
+import { IListDataPieChart } from "../types/types";
 
 function PieCharts({ dataPieChart, colorPieChart }: IListDataPieChart) {
   const renderLabel = (entry: any) => {

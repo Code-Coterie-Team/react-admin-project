@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { InitialState } from "../types/api";
+import { InitialState } from "../types/types";
 
 function ToggleButton({ initialState }: InitialState) {
   const [toggleButton, setToggleButton] = useState(initialState);
 
   const handleToggleButton = () => {
-    setToggleButton((prevState:any) => !prevState);
+    setToggleButton((prevState: any) => !prevState);
   };
   return (
     <button

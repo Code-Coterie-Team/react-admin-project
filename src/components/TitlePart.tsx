@@ -1,4 +1,4 @@
-import { ITitlePart } from "../types/api";
+import { ITitlePart } from "../types/types";
 
 function TitlePart(props: ITitlePart) {
   return (

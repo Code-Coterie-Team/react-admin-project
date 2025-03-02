@@ -1,4 +1,4 @@
-import { IPanelAnalytic } from "../types/api";
+import { IPanelAnalytic } from "../types/types";
 
 function PanelAnalytics(props: IPanelAnalytic) {
   return (
